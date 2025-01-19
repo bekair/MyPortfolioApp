@@ -28,11 +28,19 @@ export default async function handler(
     const transportParams = {
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT),
-      secure: process.env.SMTP_PORT === '465',
+      secure: true,
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
       },
+      tls: {
+        rejectUnauthorized: false
+      },
+      headers: {
+        'X-Priority': '1',
+        'X-MSMail-Priority': 'High',
+        'Importance': 'high'
+      }
     }
     console.log('Transport Params:', { ...transportParams, auth: { user: transportParams.auth.user } });
 
@@ -40,20 +48,30 @@ export default async function handler(
     console.log('Transporter created');
 
     await transporter.sendMail({
-      from: process.env.SMTP_USER,
+      from: {
+        name: "Portfolio Contact Form",
+        address: process.env.SMTP_USER
+      },
       to: process.env.RECIPIENT_EMAIL,
-      subject: subject || 'New Contact Form Message',
-      text: `Message from: ${senderEmail}\n\n${message}`,
+      subject: `[Portfolio Contact] ${subject || 'New Message'}`,
       replyTo: senderEmail,
+      text: `Message from: ${senderEmail}\n\nSubject: ${subject}\n\n${message}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2>Portfolio Contact Form Message</h2>
+          <p><strong>From:</strong> ${senderEmail}</p>
+          <p><strong>Subject:</strong> ${subject}</p>
+          <hr style="border: 1px solid #eee; margin: 20px 0;">
+          <p><strong>Message:</strong></p>
+          <p style="white-space: pre-wrap;">${message}</p>
+        </div>
+      `
     });
     console.log('Email sent successfully');
 
-    res.status(200).json({ message: 'Email sent successfully' });
+    return res.status(200).json({ message: 'Email sent successfully' });
   } catch (error) {
     console.error('Error sending email:', error);
-    res.status(500).json({ 
-      message: 'Failed to send email', 
-      error: (error as Error).message 
-    });
+    return res.status(500).json({ message: 'Error sending email' });
   }
 } 

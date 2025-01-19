@@ -5,6 +5,7 @@ import SectionTitle from '../common/SectionTitle';
 import { useTheme } from '../../context/ThemeContext';
 import ReactCountryFlag from 'react-country-flag';
 import axios from 'axios';
+import toast from 'react-hot-toast';
 
 const Contact: React.FC = () => {
   const { theme } = useTheme();
@@ -30,9 +31,7 @@ const Contact: React.FC = () => {
 
   const handleSendEmail = async () => {
     if (!message.trim() || !senderEmail.trim() || !subject.trim()) {
-      setShowError(true);
-      setErrorMessage('Please fill in all fields');
-      setTimeout(() => setShowError(false), 3000);
+      toast.error('Please fill in all fields');
       return;
     }
 
@@ -48,13 +47,10 @@ const Contact: React.FC = () => {
       setSenderEmail('');
       setSubject('');
       setShowEmailInput(false);
-      setShowSuccess(true);
-      setTimeout(() => setShowSuccess(false), 3000);
+      toast.success('Message sent successfully!');
     } catch (error) {
       console.error('Error:', error);
-      setShowError(true);
-      setErrorMessage('Failed to send email. Please try again.');
-      setTimeout(() => setShowError(false), 3000);
+      toast.error('Failed to send email. Please try again.');
     } finally {
       setSending(false);
     }
@@ -181,19 +177,6 @@ const Contact: React.FC = () => {
             </div>
 
             <div className="space-y-6">
-              <div className="relative">
-                <textarea
-                  value={message}
-                  onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Write your message here..."
-                  className={`w-full h-32 p-4 rounded-xl resize-none ${
-                    theme === 'dark'
-                      ? 'bg-gray-700 text-gray-100 placeholder-gray-400'
-                      : 'bg-gray-50 text-gray-900 placeholder-gray-500'
-                  } focus:ring-2 focus:ring-primary-500 outline-none`}
-                />
-              </div>
-
               <AnimatePresence>
                 {showEmailInput && (
                   <motion.div className="space-y-4">
@@ -234,6 +217,18 @@ const Contact: React.FC = () => {
                   </motion.div>
                 )}
               </AnimatePresence>
+
+              <textarea
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                placeholder="Write your message here..."
+                rows={6}
+                className={`w-full h-32 p-4 rounded-xl resize-none ${
+                  theme === 'dark'
+                    ? 'bg-gray-700 text-gray-100 placeholder-gray-400'
+                    : 'bg-gray-50 text-gray-900 placeholder-gray-500'
+                } focus:ring-2 focus:ring-primary-500 outline-none`}
+              />
 
               <AnimatePresence>
                 {showError && (

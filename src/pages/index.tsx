@@ -6,17 +6,22 @@ import FreelanceJobs from '../components/sections/FreelanceJobs';
 import Hero from '../components/sections/Hero';
 import Projects from '../components/sections/Projects';
 import Skills from '../components/sections/Skills';
+import type { NextPage } from 'next';
+import Certificates from '@/components/sections/Certificates';
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
     <main>
       <Hero />
       <About />
-      <Experience />
       <Skills />
+      <Experience />
       <Projects />
       <FreelanceJobs />
+      <Certificates />
       <Contact />
     </main>
   );
-} 
+}
+
+export default Home; 

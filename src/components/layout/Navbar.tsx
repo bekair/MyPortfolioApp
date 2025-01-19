@@ -4,6 +4,7 @@ import { slide as Menu } from 'react-burger-menu';
 import { useTheme } from '../../context/ThemeContext';
 import ThemeToggle from '../common/ThemeToggle';
 import { FaChevronDown, FaHome, FaUser, FaCode, FaBriefcase, FaProjectDiagram, FaEnvelope, FaLaptopCode, FaCertificate } from 'react-icons/fa';
+import Link from 'next/link';
 
 const Navbar: React.FC = () => {
   const { theme } = useTheme();
@@ -134,65 +135,71 @@ const Navbar: React.FC = () => {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <motion.a 
-            href="#home"
-            className="flex items-center space-x-2 cursor-pointer"
+          <motion.div 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <div className="flex items-center">
-              <motion.span
-                className="text-3xl font-bold bg-primary-600 text-white h-10 w-10 rounded-lg flex items-center justify-center"
-                whileHover={{ rotate: -6 }}
-                initial={{ rotate: -6 }}
-              >
-                B
-              </motion.span>
-              <motion.span
-                className="text-3xl font-bold bg-primary-500 text-white h-10 w-10 rounded-lg flex items-center justify-center -ml-2"
-                whileHover={{ rotate: 6 }}
-              >
-                C
-              </motion.span>
-              <motion.span
-                className="text-3xl font-bold bg-primary-400 text-white h-10 w-10 rounded-lg flex items-center justify-center -ml-2"
-                whileHover={{ rotate: 6 }}
-                initial={{ rotate: 6 }}
-              >
-                B
-              </motion.span>
-            </div>
-            <span className={`bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent text-xl font-bold hidden sm:inline-block transition-colors duration-300`}>
-              Portfolio
-            </span>
-          </motion.a>
+            <Link 
+              href="#home"
+              className="flex items-center space-x-2 cursor-pointer"
+            >
+              <div className="flex items-center">
+                <motion.span
+                  className="text-3xl font-bold bg-primary-600 text-white h-10 w-10 rounded-lg flex items-center justify-center"
+                  whileHover={{ rotate: -6 }}
+                  initial={{ rotate: -6 }}
+                >
+                  B
+                </motion.span>
+                <motion.span
+                  className="text-3xl font-bold bg-primary-500 text-white h-10 w-10 rounded-lg flex items-center justify-center -ml-2"
+                  whileHover={{ rotate: 6 }}
+                >
+                  C
+                </motion.span>
+                <motion.span
+                  className="text-3xl font-bold bg-primary-400 text-white h-10 w-10 rounded-lg flex items-center justify-center -ml-2"
+                  whileHover={{ rotate: 6 }}
+                  initial={{ rotate: 6 }}
+                >
+                  B
+                </motion.span>
+              </div>
+              <span className={`bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent text-xl font-bold hidden sm:inline-block transition-colors duration-300`}>
+                Portfolio
+              </span>
+            </Link>
+          </motion.div>
 
           {/* Desktop Navigation - Text Only */}
           <div className="hidden lg:flex items-center justify-center flex-1 px-4">
             <div className="flex space-x-6">
               {mainNavItems.map((item) => (
-                <motion.a
+                <motion.div
                   key={item.name}
-                  href={`#${item.name.toLowerCase()}`}
-                  onClick={() => handleNavClick(item.name.toLowerCase())}
-                  className={`relative px-2 py-1 text-sm transition-colors duration-300 ${
-                    activeSection === item.name.toLowerCase()
-                      ? theme === 'dark' ? 'text-primary-400' : 'text-primary-600'
-                      : theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
-                  }`}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  {item.name}
-                  {activeSection === item.name.toLowerCase() && (
-                    <motion.div
-                      layoutId="underline"
-                      className={`absolute bottom-0 left-0 w-full h-0.5 ${
-                        theme === 'dark' ? 'bg-primary-400' : 'bg-primary-600'
-                      }`}
-                    />
-                  )}
-                </motion.a>
+                  <Link 
+                    href={`#${item.name.toLowerCase()}`}
+                    onClick={() => handleNavClick(item.name.toLowerCase())}
+                    className={`relative px-2 py-1 text-sm transition-colors duration-300 ${
+                      activeSection === item.name.toLowerCase()
+                        ? theme === 'dark' ? 'text-primary-400' : 'text-primary-600'
+                        : theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                    }`}
+                  >
+                    {item.name}
+                    {activeSection === item.name.toLowerCase() && (
+                      <motion.div
+                        layoutId="underline"
+                        className={`absolute bottom-0 left-0 w-full h-0.5 ${
+                          theme === 'dark' ? 'bg-primary-400' : 'bg-primary-600'
+                        }`}
+                      />
+                    )}
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -225,22 +232,25 @@ const Navbar: React.FC = () => {
                     onMouseLeave={() => setShowDropdown(false)}
                   >
                     {dropdownNavItems.map((item) => (
-                      <motion.a
+                      <motion.div
                         key={item.name}
-                        href={`#${item.name.toLowerCase()}`}
-                        onClick={() => {
-                          handleNavClick(item.name.toLowerCase());
-                          setShowDropdown(false);
-                        }}
-                        className={`block px-4 py-2 text-sm ${
-                          activeSection === item.name.toLowerCase()
-                            ? theme === 'dark' ? 'text-primary-400' : 'text-primary-600'
-                            : theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
-                        } hover:bg-gray-100 dark:hover:bg-gray-700`}
                         whileHover={{ x: 6 }}
                       >
-                        {item.name}
-                      </motion.a>
+                        <Link 
+                          href={`#${item.name.toLowerCase()}`}
+                          onClick={() => {
+                            handleNavClick(item.name.toLowerCase());
+                            setShowDropdown(false);
+                          }}
+                          className={`block px-4 py-2 text-sm ${
+                            activeSection === item.name.toLowerCase()
+                              ? theme === 'dark' ? 'text-primary-400' : 'text-primary-600'
+                              : theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
+                          } hover:bg-gray-100 dark:hover:bg-gray-700`}
+                        >
+                          {item.name}
+                        </Link>
+                      </motion.div>
                     ))}
                   </motion.div>
                 )}
@@ -294,28 +304,35 @@ const Navbar: React.FC = () => {
       >
         {/* Main Items */}
         {mainNavItems.map((item) => (
-          <motion.a
+          <motion.div
             key={item.name}
-            href={`#${item.name.toLowerCase()}`}
-            onClick={() => {
-              handleNavClick(item.name.toLowerCase());
-              setIsMobileMenuOpen(false);
+            whileHover={{ 
+              x: 10,
+              transition: { duration: 0.2 }
             }}
-            className={`block px-4 py-3 rounded-lg transition-colors ${
-              activeSection === item.name.toLowerCase()
-                ? theme === 'dark'
-                  ? 'bg-gray-800 text-primary-400'
-                  : 'bg-gray-100 text-primary-600'
-                : theme === 'dark'
-                  ? 'text-gray-300 hover:bg-gray-800'
-                  : 'text-gray-700 hover:bg-gray-100'
-            }`}
           >
-            <div className="flex items-center gap-3">
-              {item.icon}
-              <span>{item.name}</span>
-            </div>
-          </motion.a>
+            <Link 
+              href={`#${item.name.toLowerCase()}`}
+              onClick={() => {
+                handleNavClick(item.name.toLowerCase());
+                setIsMobileMenuOpen(false);
+              }}
+              className={`block px-4 py-3 rounded-lg transition-colors ${
+                activeSection === item.name.toLowerCase()
+                  ? theme === 'dark'
+                    ? 'bg-gray-800 text-primary-400'
+                    : 'bg-gray-100 text-primary-600'
+                  : theme === 'dark'
+                    ? 'text-gray-300 hover:bg-gray-800'
+                    : 'text-gray-700 hover:bg-gray-100'
+              }`}
+            >
+              <div className="flex items-center gap-3">
+                {item.icon}
+                <span>{item.name}</span>
+              </div>
+            </Link>
+          </motion.div>
         ))}
 
         {/* Divider */}
@@ -328,28 +345,35 @@ const Navbar: React.FC = () => {
           More
         </div>
         {dropdownNavItems.map((item) => (
-          <motion.a
+          <motion.div
             key={item.name}
-            href={`#${item.name.toLowerCase()}`}
-            onClick={() => {
-              handleNavClick(item.name.toLowerCase());
-              setIsMobileMenuOpen(false);
+            whileHover={{ 
+              x: 10,
+              transition: { duration: 0.2 }
             }}
-            className={`block px-4 py-3 rounded-lg transition-colors ${
-              activeSection === item.name.toLowerCase()
-                ? theme === 'dark'
-                  ? 'bg-gray-800 text-primary-400'
-                  : 'bg-gray-100 text-primary-600'
-                : theme === 'dark'
-                  ? 'text-gray-300 hover:bg-gray-800'
-                  : 'text-gray-700 hover:bg-gray-100'
-            }`}
           >
-            <div className="flex items-center gap-3">
-              {item.icon}
-              <span>{item.name}</span>
-            </div>
-          </motion.a>
+            <Link 
+              href={`#${item.name.toLowerCase()}`}
+              onClick={() => {
+                handleNavClick(item.name.toLowerCase());
+                setIsMobileMenuOpen(false);
+              }}
+              className={`block px-4 py-3 rounded-lg transition-colors ${
+                activeSection === item.name.toLowerCase()
+                  ? theme === 'dark'
+                    ? 'bg-gray-800 text-primary-400'
+                    : 'bg-gray-100 text-primary-600'
+                  : theme === 'dark'
+                    ? 'text-gray-300 hover:bg-gray-800'
+                    : 'text-gray-700 hover:bg-gray-100'
+              }`}
+            >
+              <div className="flex items-center gap-3">
+                {item.icon}
+                <span>{item.name}</span>
+              </div>
+            </Link>
+          </motion.div>
         ))}
       </Menu>
     </motion.nav>

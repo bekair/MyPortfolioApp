@@ -1,0 +1,6 @@
+{
+  "shellcheck.enable": false,
+  "shellcheck.ignorePatterns": {
+    "**/*.env*": true
+  }
+} 
