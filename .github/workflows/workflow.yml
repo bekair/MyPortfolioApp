@@ -7,7 +7,7 @@ on:
 
 env:
   NODE_VERSION: '18.x'
-  AZURE_WEBAPP_NAME: 'my-portfolio-app'
+  AZURE_WEBAPP_NAME: 'bcb-portfolio-app'
   AZURE_WEBAPP_PACKAGE_PATH: '.'
 
 jobs:
