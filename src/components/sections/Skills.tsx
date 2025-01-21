@@ -50,6 +50,24 @@ const skillCategories = [
   }
 ];
 
+const experienceTimeline = [
+  {
+    year: "10+",
+    area: ".NET Development",
+    description: "Enterprise Applications & APIs"
+  },
+  {
+    year: "6+",
+    area: "Frontend Development",
+    description: "React & Modern JavaScript"
+  },
+  {
+    year: "2.5+",
+    area: "DevOps & Cloud",
+    description: "Azure & CI/CD Pipelines"
+  }
+];
+
 const SkillCard: React.FC<{ skill: Skill }> = ({ skill }) => {
   const { theme } = useTheme();
   const Icon = skill.icon;
@@ -110,7 +128,35 @@ const Skills: React.FC = () => {
         transition={{ duration: 0.5 }}
       >
         <SectionTitle title="Skills & Expertise" />
-        
+
+        {/* Experience Timeline */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {experienceTimeline.map((exp, index) => (
+              <motion.div
+                key={exp.area}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                className={`p-6 rounded-xl border-2 ${
+                  theme === 'dark' 
+                    ? 'border-primary-700 bg-primary-900/10' 
+                    : 'border-primary-200 bg-primary-50'
+                } text-center hover:transform hover:-translate-y-1 transition-all duration-300`}
+              >
+                <div className={`text-4xl font-bold mb-2 ${
+                  theme === 'dark' ? 'text-primary-400' : 'text-primary-600'
+                }`}>
+                  {exp.year}
+                </div>
+                <div className="text-lg font-semibold mb-1">{exp.area}</div>
+                <div className="text-sm text-theme-secondary">{exp.description}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
         <div className="space-y-12 max-w-6xl mx-auto">
           {skillCategories.map((category, index) => (
             <motion.div
