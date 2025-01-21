@@ -10,17 +10,26 @@ const About: React.FC = () => {
     {
       icon: FaLaptopCode,
       title: "Senior Software Engineer",
-      description: "Specialized in .NET Core and modern web technologies"
+      description: "Specialized in .NET Core and modern web technologies",
+      color: "text-primary-500",
+      bgColor: theme === 'dark' ? "bg-primary-900/20" : "bg-primary-50",
+      borderColor: theme === 'dark' ? "border-primary-700" : "border-primary-200"
     },
     {
       icon: FaGraduationCap,
       title: "MSc in Software Engineering",
-      description: "Middle East Technical University (METU)"
+      description: "Middle East Technical University (METU)",
+      color: "text-primary-500",
+      bgColor: theme === 'dark' ? "bg-primary-900/20" : "bg-primary-50",
+      borderColor: theme === 'dark' ? "border-primary-700" : "border-primary-200"
     },
     {
       icon: FaUserTie,
       title: "10+ Years Experience",
-      description: "Building enterprise-level applications"
+      description: "Building enterprise-level applications",
+      color: "text-primary-500",
+      bgColor: theme === 'dark' ? "bg-primary-900/20" : "bg-primary-50",
+      borderColor: theme === 'dark' ? "border-primary-700" : "border-primary-200"
     }
   ];
 
@@ -37,14 +46,25 @@ const About: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
-              className="bg-theme-secondary p-6 rounded-xl hover:shadow-xl transition-all duration-300"
+              className={`
+                ${item.bgColor} 
+                ${item.borderColor} 
+                border 
+                p-6 
+                rounded-xl 
+                hover:shadow-xl 
+                transition-all 
+                duration-300 
+                transform 
+                hover:-translate-y-1
+              `}
             >
               <div className="flex items-center gap-4">
-                <div className="text-3xl text-theme-accent">
+                <div className={`text-4xl ${item.color}`}>
                   <item.icon />
                 </div>
                 <div>
-                  <h3 className="font-bold text-theme">{item.title}</h3>
+                  <h3 className="font-bold text-lg">{item.title}</h3>
                   <p className="text-theme-secondary">{item.description}</p>
                 </div>
               </div>
