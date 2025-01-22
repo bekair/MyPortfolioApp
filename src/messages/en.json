@@ -1,0 +1,23 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "titles": {
+      "role": "Senior Software Engineer",
+      "specialty": ".NET Developer",
+      "subtitle": "Tech Enthusiast"
+    },
+    "buttons": {
+      "viewProjects": "View Projects",
+      "contactMe": "Contact Me",
+      "cv": "CV"
+    }
+  }
+} 

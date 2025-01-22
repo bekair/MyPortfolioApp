@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
             <p className={`text-xl md:text-2xl mb-8 ${
               theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
             }`}>
-              Senior Software Engineer | .NET Developer | Tech Enthusiast
+              Senior Software Engineer | .NET Developer | Full Stack Developer (React)
             </p>
 
             <div className="flex flex-col md:flex-row justify-center items-center gap-8 mb-12">

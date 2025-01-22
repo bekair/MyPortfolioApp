@@ -5,6 +5,7 @@ import { useTheme } from '../../context/ThemeContext';
 import ThemeToggle from '../common/ThemeToggle';
 import { FaChevronDown, FaHome, FaUser, FaCode, FaBriefcase, FaProjectDiagram, FaEnvelope, FaLaptopCode, FaCertificate } from 'react-icons/fa';
 import Link from 'next/link';
+import LanguageSelector from '../common/LanguageSelector';
 
 const Navbar: React.FC = () => {
   const { theme } = useTheme();
@@ -257,9 +258,14 @@ const Navbar: React.FC = () => {
               </AnimatePresence>
             </div>
 
-            {/* Theme Toggle */}
-            <div className="relative z-50">
-              <ThemeToggle compact={!!isMobileMenuOpen} />
+            {/* Language & Theme Controls - Desktop Only */}
+            <div className="hidden lg:flex items-center space-x-4">
+              <div className="relative z-50">
+                <LanguageSelector />
+              </div>
+              <div className="relative z-50">
+                <ThemeToggle compact={!!isMobileMenuOpen} />
+              </div>
             </div>
 
             {/* Mobile Menu Button */}
@@ -302,6 +308,16 @@ const Navbar: React.FC = () => {
         width={280}
         customBurgerIcon={false}
       >
+        {/* Controls Section - Mobile Only */}
+        <div className={`px-4 py-3 mb-2 border-b ${
+          theme === 'dark' ? 'border-gray-700' : 'border-gray-200'
+        }`}>
+          <div className="flex items-center justify-between">
+            <LanguageSelector />
+            <ThemeToggle compact={true} />
+          </div>
+        </div>
+
         {/* Main Items */}
         {mainNavItems.map((item) => (
           <motion.div
