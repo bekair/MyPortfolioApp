@@ -5,6 +5,7 @@ import { FaTimes, FaDownload } from 'react-icons/fa';
 import { Document, Page } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
+import { useTranslations } from 'next-intl';
 
 interface CVModalProps {
   isOpen: boolean;
@@ -16,6 +17,7 @@ const CVModal: React.FC<CVModalProps> = ({ isOpen, onClose }) => {
   const [numPages, setNumPages] = useState<number | null>(null);
   const [pageNumber, setPageNumber] = useState(1);
   const isMobile = window.innerWidth < 768; // md breakpoint
+  const t = useTranslations("cvModal");
 
   useEffect(() => {
     if (isMobile) {
@@ -59,12 +61,12 @@ const CVModal: React.FC<CVModalProps> = ({ isOpen, onClose }) => {
                   <h2 className={`text-lg font-semibold ${
                     theme === 'dark' ? 'text-gray-100' : 'text-gray-900'
                   }`}>
-                    Curriculum Vitae
+                    {t('title')}
                   </h2>
                   {isMobile && (
                     <a
                       href="/CV - Bekir Can Baykal (15.01.2025).pdf"
-                      download="CV - Bekir Can Baykal.pdf"
+                      download={t('downloadFileName')}
                       className={`flex items-center gap-1 px-2 py-1 rounded text-sm ${
                         theme === 'dark' 
                           ? 'bg-gray-700 hover:bg-gray-600 text-gray-200' 
@@ -81,7 +83,7 @@ const CVModal: React.FC<CVModalProps> = ({ isOpen, onClose }) => {
                     <span className={`text-sm ${
                       theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
                     }`}>
-                      {pageNumber} of {numPages}
+                      {pageNumber} / {numPages}
                     </span>
                   )}
                   <button
@@ -118,9 +120,9 @@ const CVModal: React.FC<CVModalProps> = ({ isOpen, onClose }) => {
                           pageNumber <= 1 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-gray-100'
                         }`}
                       >
-                        Previous
+                        {t('buttons.previous')}
                       </button>
-                      <span>{pageNumber} of {numPages}</span>
+                      <span>{pageNumber} / {numPages}</span>
                       <button
                         onClick={() => changePage(1)}
                         disabled={pageNumber >= (numPages || 1)}
@@ -128,7 +130,7 @@ const CVModal: React.FC<CVModalProps> = ({ isOpen, onClose }) => {
                           pageNumber >= (numPages || 1) ? 'opacity-50 cursor-not-allowed' : 'hover:bg-gray-100'
                         }`}
                       >
-                        Next
+                        {t('buttons.next')}
                       </button>
                     </div>
                   </>
@@ -136,7 +138,7 @@ const CVModal: React.FC<CVModalProps> = ({ isOpen, onClose }) => {
                   <iframe
                     src="/CV - Bekir Can Baykal (15.01.2025).pdf#zoom=67"
                     className="w-full h-full"
-                    title="CV"
+                    title={t('title')}
                   />
                 )}
               </div>
@@ -146,7 +148,7 @@ const CVModal: React.FC<CVModalProps> = ({ isOpen, onClose }) => {
                   onClick={onClose}
                   className="w-full py-2 px-4 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
                 >
-                  Close
+                  {t('buttons.close')}
                 </button>
               </div>
             </div>

@@ -3,31 +3,51 @@ import { motion } from 'framer-motion';
 import { FaShoppingCart, FaBitcoin, FaStore } from 'react-icons/fa';
 import SectionTitle from '../common/SectionTitle';
 import { useTheme } from '../../context/ThemeContext';
+import { useTranslations } from 'next-intl';
 
 const FreelanceJobs: React.FC = () => {
   const { theme } = useTheme();
+  const t = useTranslations('freelance');
 
   const projects = [
     {
       icon: FaShoppingCart,
-      title: "Grocery Web App",
-      duration: "1 year",
-      description: "Architected and developed a comprehensive e-commerce solution for a grocery business startup. Implemented full-stack development using ASP.NET MVC, creating a scalable architecture that handled inventory management, order processing, and user authentication. Designed and implemented both customer-facing interfaces and administrative dashboards, ensuring a seamless shopping experience.",
-      technologies: ["ASP.NET MVC", "SQL Server", "JavaScript", "Bootstrap", "Entity Framework"]
+      title: t('first.title'),
+      duration: t('first.duration'),
+      description: t('first.description'),
+      technologies: [
+        t('first.technologies.first'), 
+        t('first.technologies.second'), 
+        t('first.technologies.third'), 
+        t('first.technologies.fourth'), 
+        t('first.technologies.fifth')
+      ]
     },
     {
       icon: FaBitcoin,
-      title: "Orbit Crypto",
-      duration: "2 months",
-      description: "Led frontend development for a cryptocurrency platform specializing in token launches and funding operations. Engineered robust wallet integration systems and implemented complex blockchain interactions using React. Developed intuitive user interfaces for token management, funding operations, and real-time cryptocurrency tracking.",
-      technologies: ["React", "Web3.js", "TypeScript", "Tailwind CSS", "MetaMask Integration"]
+      title: t('second.title'),
+      duration: t('second.duration'),
+      description: t('second.description'),
+      technologies: [
+        t('second.technologies.first'),
+        t('second.technologies.second'),
+        t('second.technologies.third'),
+        t('second.technologies.fourth'),
+        t('second.technologies.fifth')
+      ]
     },
     {
       icon: FaStore,
-      title: "Wholesale E-commerce Platform",
-      duration: "1 year",
-      description: "Spearheaded full-stack development of a wholesale e-commerce platform, focusing on B2B transactions. Implemented complex database queries for bulk order processing and integrated multiple third-party services for payment processing, shipping, and e-invoice management. Developed responsive user interfaces optimized for wholesale operations.",
-      technologies: ["ASP.NET Core", "React", "SQL Server", "Redis", "RESTful APIs"]
+      title: t('third.title'),
+      duration: t('third.duration'),
+      description: t('third.description'),
+      technologies: [
+        t('third.technologies.first'),
+        t('third.technologies.second'),
+        t('third.technologies.third'),
+        t('third.technologies.fourth'),
+        t('third.technologies.fifth')
+      ]
     }
   ];
 
@@ -36,8 +56,8 @@ const FreelanceJobs: React.FC = () => {
       theme === 'dark' ? 'bg-gray-900' : 'bg-white'
     }`}>
       <div className="max-w-6xl mx-auto">
-        <SectionTitle title="Freelance Projects" />
-        
+        <SectionTitle title={t('title')} />
+
         <div className="grid grid-cols-1 gap-8">
           {projects.map((project, index) => (
             <motion.div
@@ -68,7 +88,7 @@ const FreelanceJobs: React.FC = () => {
                     <p className={`text-sm ${
                       theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
                     }`}>
-                      Duration: {project.duration}
+                      {t('duration')}: {project.duration}
                     </p>
                   </div>
                   <p className={`text-base leading-relaxed ${
@@ -80,10 +100,10 @@ const FreelanceJobs: React.FC = () => {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className={`px-3 py-1 text-sm rounded-full ${
+                        className={`px-3 py-1 rounded-full text-sm font-medium ${
                           theme === 'dark'
-                            ? 'bg-gray-700 text-gray-300'
-                            : 'bg-gray-100 text-gray-700'
+                            ? 'bg-primary-900/30 text-primary-400'
+                            : 'bg-primary-50 text-primary-600'
                         }`}
                       >
                         {tech}

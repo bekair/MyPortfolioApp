@@ -4,8 +4,10 @@ import { slide as Menu } from 'react-burger-menu';
 import { useTheme } from '../../context/ThemeContext';
 import ThemeToggle from '../common/ThemeToggle';
 import { FaChevronDown, FaHome, FaUser, FaCode, FaBriefcase, FaProjectDiagram, FaEnvelope, FaLaptopCode, FaCertificate } from 'react-icons/fa';
-import Link from 'next/link';
 import LanguageSelector from '../common/LanguageSelector';
+import { Link } from '@/i18n/routing';
+import { useRouter, usePathname } from '@/i18n/routing';
+import { useTranslations } from 'next-intl';
 
 const Navbar: React.FC = () => {
   const { theme } = useTheme();
@@ -14,7 +16,9 @@ const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isManualNavigation, setIsManualNavigation] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
-
+  const router = useRouter();
+  const pathname = usePathname();
+  const t = useTranslations();
   const burgerStyles = {
     bmBurgerButton: {
       display: 'none',
@@ -57,19 +61,18 @@ const Navbar: React.FC = () => {
     }
   };
 
-  // Group your navigation items
   const mainNavItems = [
-    { name: 'Home', icon: <FaHome className="text-xl" /> },
-    { name: 'About', icon: <FaUser className="text-xl" /> },
-    { name: 'Skills', icon: <FaCode className="text-xl" /> },
-    { name: 'Experience', icon: <FaBriefcase className="text-xl" /> },
-    { name: 'Projects', icon: <FaProjectDiagram className="text-xl" /> },
-    { name: 'Contact', icon: <FaEnvelope className="text-xl" /> },
+    { name: t('nav.home'), hrefName: 'home', icon: <FaHome className="text-xl" /> },
+    { name: t('nav.about'), hrefName: 'about', icon: <FaUser className="text-xl" /> },
+    { name: t('nav.skills'), hrefName: 'skills', icon: <FaCode className="text-xl" /> },
+    { name: t('nav.experiences'), hrefName: 'experiences', icon: <FaBriefcase className="text-xl" /> },
+    { name: t('nav.projects'), hrefName: 'projects', icon: <FaProjectDiagram className="text-xl" /> },
+    { name: t('nav.contact'), hrefName: 'contact', icon: <FaEnvelope className="text-xl" /> },
   ];
 
   const dropdownNavItems = [
-    { name: 'Freelance', icon: <FaLaptopCode className="text-xl" /> },
-    { name: 'Certificates', icon: <FaCertificate className="text-xl" /> },
+    { name: t('nav.freelance'), hrefName: 'freelance', icon: <FaLaptopCode className="text-xl" /> },
+    { name: t('nav.certificates'), hrefName: 'certificates', icon: <FaCertificate className="text-xl" /> },
   ];
 
   useEffect(() => {
@@ -85,8 +88,8 @@ const Navbar: React.FC = () => {
         'home', 
         'about', 
         'skills', 
+        'experiences',
         'projects',
-        'experience',
         'contact',
         'freelance', 
         'certificates'
@@ -116,6 +119,15 @@ const Navbar: React.FC = () => {
   const handleNavClick = (section: string) => {
     setIsManualNavigation(true);
     setActiveSection(section);
+
+    if (pathname !== '/') {
+      router.push('/');
+      setTimeout(() => {
+        window.location.hash = `#${section}`;
+      }, 100);
+    } else {
+      window.location.hash = `#${section}`;
+    }
 
     setTimeout(() => {
       setIsManualNavigation(false);
@@ -167,7 +179,7 @@ const Navbar: React.FC = () => {
                 </motion.span>
               </div>
               <span className={`bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent text-xl font-bold hidden sm:inline-block transition-colors duration-300`}>
-                Portfolio
+                {t('nav.portfolio')}
               </span>
             </Link>
           </motion.div>
@@ -182,16 +194,19 @@ const Navbar: React.FC = () => {
                   whileTap={{ scale: 0.95 }}
                 >
                   <Link 
-                    href={`#${item.name.toLowerCase()}`}
-                    onClick={() => handleNavClick(item.name.toLowerCase())}
+                    href={`#${item.hrefName}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      handleNavClick(item.hrefName);
+                    }}
                     className={`relative px-2 py-1 text-sm transition-colors duration-300 ${
-                      activeSection === item.name.toLowerCase()
+                      activeSection === item.hrefName
                         ? theme === 'dark' ? 'text-primary-400' : 'text-primary-600'
                         : theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
                     }`}
                   >
                     {item.name}
-                    {activeSection === item.name.toLowerCase() && (
+                    {activeSection === item.hrefName && (
                       <motion.div
                         layoutId="underline"
                         className={`absolute bottom-0 left-0 w-full h-0.5 ${
@@ -217,7 +232,7 @@ const Navbar: React.FC = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span>More</span>
+                <span>{t('nav.more')}</span>
                 <FaChevronDown className={`transform transition-transform ${showDropdown ? 'rotate-180' : ''}`} />
               </motion.button>
 
@@ -238,13 +253,14 @@ const Navbar: React.FC = () => {
                         whileHover={{ x: 6 }}
                       >
                         <Link 
-                          href={`#${item.name.toLowerCase()}`}
-                          onClick={() => {
-                            handleNavClick(item.name.toLowerCase());
+                          href={`#${item.hrefName}`}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            handleNavClick(item.hrefName);
                             setShowDropdown(false);
                           }}
                           className={`block px-4 py-2 text-sm ${
-                            activeSection === item.name.toLowerCase()
+                            activeSection === item.hrefName
                               ? theme === 'dark' ? 'text-primary-400' : 'text-primary-600'
                               : theme === 'dark' ? 'text-gray-300' : 'text-gray-700'
                           } hover:bg-gray-100 dark:hover:bg-gray-700`}
@@ -328,13 +344,14 @@ const Navbar: React.FC = () => {
             }}
           >
             <Link 
-              href={`#${item.name.toLowerCase()}`}
-              onClick={() => {
-                handleNavClick(item.name.toLowerCase());
+              href={`#${item.hrefName}`}
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick(item.hrefName);
                 setIsMobileMenuOpen(false);
               }}
               className={`block px-4 py-3 rounded-lg transition-colors ${
-                activeSection === item.name.toLowerCase()
+                activeSection === item.hrefName
                   ? theme === 'dark'
                     ? 'bg-gray-800 text-primary-400'
                     : 'bg-gray-100 text-primary-600'
@@ -358,7 +375,7 @@ const Navbar: React.FC = () => {
 
         {/* More Items */}
         <div className="px-4 py-2 text-sm text-gray-500">
-          More
+          {t('nav.more')}
         </div>
         {dropdownNavItems.map((item) => (
           <motion.div
@@ -369,13 +386,14 @@ const Navbar: React.FC = () => {
             }}
           >
             <Link 
-              href={`#${item.name.toLowerCase()}`}
-              onClick={() => {
-                handleNavClick(item.name.toLowerCase());
+              href={`#${item.hrefName}`}
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick(item.hrefName);
                 setIsMobileMenuOpen(false);
               }}
               className={`block px-4 py-3 rounded-lg transition-colors ${
-                activeSection === item.name.toLowerCase()
+                activeSection === item.hrefName
                   ? theme === 'dark'
                     ? 'bg-gray-800 text-primary-400'
                     : 'bg-gray-100 text-primary-600'

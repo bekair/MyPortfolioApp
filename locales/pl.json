@@ -1,0 +1,368 @@
+{
+    "nav": {
+      "portfolio": "Portfolio",
+      "home": "Strona główna",
+      "about": "O nas",
+      "skills": "Umiejętności",
+      "experiences": "Doświadczenia",
+      "projects": "Projekty",
+      "freelance": "Freelancer",
+      "certificates": "Certyfikaty",
+      "contact": "Kontakt",
+      "more": "Więcej"
+    },
+    "footer": {
+      "copyright": "Wszelkie prawa zastrzeżone.",
+      "specialty": "Starszy inżynier oprogramowania"
+    },
+    "hero": {
+      "greeting": "Cześć, jestem",
+      "name": "Bekir Can Baykal",
+      "titles": {
+        "specialty1": "Starszy inżynier oprogramowania",
+        "specialty2": "Starszy programista .NET",
+        "specialty3": "Starszy programista full stack (React)"
+      },
+      "buttons": {
+        "viewProjects": "Zobacz projekty",
+        "contactMe": "Skontaktuj się",
+        "cv": "CV"
+      }
+
+    },
+    "about": {
+      "title": "O mnie",
+      "altProfileImage": "Zdjęcie profilowe",
+      "highlights": {
+        "first": {
+          "title": "Starszy inżynier oprogramowania",
+          "description": "Specjalizujemy się w .NET Core i nowoczesnych technologiach internetowych"
+        },
+        "second": {
+          "title": "Magister inżynierii oprogramowania",
+          "description": "Middle East Technical University (METU)"
+        },
+        "third": {
+          "title": "10+ Lat Doświadczenia",
+          "description": "Budowanie aplikacji na poziomie przedsiębiorstwa"
+        }
+      },
+      "mainContent": {
+        "part1": "Jestem starszym inżynierem oprogramowania z ponad 10-letnim doświadczeniem w rozwijaniu aplikacji klasy enterprise. Moja wiedza specjalistyczna obejmuje .NET Core, React i nowoczesne technologie internetowe.",
+        "part2": "Przez całą moją karierę pracowałem nad różnymi projektami, od platform e-commerce po złożone integracje systemów. Jestem pasjonatem tworzenia wydajnych, skalowalnych rozwiązań, które rozwiązują rzeczywiste problemy.",
+        "part3": "Posiadam tytuł magistra inżynierii oprogramowania z Middle East Technical University, gdzie pogłębiłem swoją wiedzę na temat architektury oprogramowania i wzorców projektowych."
+      }
+    },
+    "skills": {
+      "title": "Umiejętności & Ekspertyza",
+      "categories":{
+        "first":{
+
+          "title": "Rozwój Zaplecza"
+        },
+        "second":{
+          "title": "Rozwój Frontendu"
+        },
+        "third":{
+          "title": "DevOps & Narzędzia"
+        }
+      },
+      "timeline":{
+        "first":{
+          "area": "Rozwój .NET",
+          "description": "Aplikacje Korporacyjne & API"
+        },
+        "second":{
+          "area": "Rozwój Frontendu",
+          "description": "React & Nowoczesny JavaScript"
+        },
+        "third":{
+          "area": "DevOps & Chmura",
+          "description": "Azure & Potoki CI/CD"
+        }
+      }
+    },
+    "experiences": {
+      "title": "Profesjonalna Podróż",
+      "first": {
+        "position": "Starszy Inżynier Oprogramowania",
+        "duration": "Lipiec 2022 - Obecnie",
+        "descriptions": {
+            "first": "Statki są wyposażone w wiele silników i wysyłają dane w określonych odstępach czasu. Aplikacja analizuje dane szeregów czasowych ze skonfigurowanych statków. Nasze algorytmy stale oceniają te dane i wykorzystują je do generowania rekomendacji.",
+            "second": "Uczestniczymy w opracowywaniu i utrzymaniu produktu Tekomar XPERT.",  
+            "third": "Refaktoryzacja implementacji TimeSeries w celu spełnienia określonych wymagań klienta.",     
+            "fourth": "Konteneryzacja nowo opracowanego podejścia przy użyciu Dockera.",   
+            "fifth": "Wdrażanie obrazu Dockera na serwerze intranetu i przeprowadzanie ocen w tym środowisku."
+        },
+        "technologies": {
+          "first": "C#", 
+          "second": ".NET", 
+          "third": "REST APIs", 
+          "fourth": "Scrum", 
+          "fifth": "Azure DevOps Server",
+          "sixth": "Docker", 
+          "seventh": "Microsoft SQL Server", 
+          "eighth": "React.js", 
+          "ninth": ".NET Core", 
+          "tenth": "Git", 
+          "eleventh": "Microsoft Azure", 
+          "twelfth": "Entity Framework (EF) Core",
+          "thirteenth": "JIRA", 
+          "fourteenth": "Docker"
+        }
+      },
+      "second": {
+        "position": "Starszy Inżynier Oprogramowania Lider Techniczny",
+        "duration": "Maj 2021 - Lipiec 2022 · 1 rok 3 miesiące",
+        "descriptions": {
+            "first": "Jako lider zespołu współpracowałem z pięcioosobowym zespołem, stosując metodologię Scrum w celu opracowania trzech projektów: Project Management Plan, Prioritization i Performance.",
+            "second": "Pomyślnie zrealizowałem wszystkie trzy projekty w ciągu jednego roku, wykorzystując następujące technologie: .NET Core 5, React, Redux Toolkit, PostGre SQL i Material UI.",
+            "third": "Skutecznie zarządzałem relacjami z klientami i koordynacją zespołu.",
+            "fourth": "Zapewniłem klientowi cenne doradztwo, ze szczególnym uwzględnieniem rozwoju .Net.",
+            "fifth": "Wspierałem klienta, Aselsan, jedną z najważniejszych firm przemysłu obronnego w Turcji, w osiąganiu celów i wymagań projektu."
+        },
+        "technologies": {
+          "first": ".NET", 
+          "second": ".NET Core", 
+          "third": "REST APIs", 
+          "fourth": "JavaScript", 
+          "fifth": "Redux", 
+          "sixth": "Team Leadership", 
+          "seventh": "PostgreSQL", 
+          "eighth": "React.js"
+        }
+      },
+      "third": {
+        "position": "Inżynier Oprogramowania",
+        "duration": "Lipiec 2018 - Maj 2021 · 3 lata",
+        "descriptions": {
+            "first": "Opracowałem i utrzymywałem system zarządzania ryzykiem katastrof dla Ministerstwa Środowiska i Planowania Miejskiego przy użyciu .Net MVC, MSSql DB i JavaScript (wrzesień 2020 r. – maj 2021 r.).",
+            "second": "Współpracowałem przy opracowaniu i utrzymaniu systemu zarządzania personelem dla tureckiego Sądu Obrachunkowego, wykorzystując .Net MVC 5, Oracle DB, MSSql DB, PostgreSQL, JavaScript i jQuery (luty 2020 r. – wrzesień 2020 r.).",
+            "third": "Współpracowałem przy aplikacji internetowej skoncentrowanej na GIS, w szczególności Map Widget, przy użyciu React i JavaScript (maj 2019 r. – luty 2020 r.).",
+            "fourth": "Przeprowadziłem testy jednostkowe, zająłem się problemami zidentyfikowanymi przez SonarQube, przebudowałem metody i klasy dla pojedynczej odpowiedzialności i uaktualniłem kod do Java 8 (lipiec 2018 r. – maj 2019 r.).",
+            "fifth": "Kierowałem refaktoryzacją projektu GIS w Javie w ramach projektu zewnętrznego w Havelsan (lipiec 2018 r. – maj 2019 r.)"
+        },
+        "technologies": {
+          "first": ".NET", 
+          "second": ".NET Core", 
+          "third": ".NET MVC", 
+          "fourth": "REST APIs", 
+          "fifth": "JavaScript", 
+          "sixth": "MsSQL", 
+          "seventh": "PostgreSQL", 
+          "eighth": "JIRA"
+        }
+      }
+    },
+    "projects": {
+      "title": "Polecane Projekty",
+      "viewCode": "Zobacz Kod",
+      "first": {
+        "title": "BookStore",
+        "description": "To jest implementacja systemu Bookstore jako część projektu magisterskiego z inżynierii oprogramowania. Jest to aplikacja do sprzedaży i zamawiania używanych książek. Projekt wykorzystuje szereg technologii i demonstruje umiejętności w zakresie rozwoju oprogramowania, projektowania architektury i zarządzania projektami.",
+        "completionDate": "Styczeń 2020",
+        "imageAlt": "Biblioteka/Półka na książki"
+      },
+      "second": {
+        "title": "Assets API",
+        "description": "Ten projekt implementuje prostą usługę, która dostarcza informacji o różnych aktywach dostępnych na rynku. Usługa odczytuje informacje o aktywach z pliku CSV i dostarcza różne punkty końcowe do zarządzania aktywami. Aktywa są definiowane według nazwy i identyfikatora, przy czym każdy zasób jest opisany przez wstępnie zdefiniowaną listę właściwości.",
+        "completionDate": "Styczeń 2021",
+        "imageAlt": "Abstrakcyjna wizualizacja danych cyfrowych"
+      },
+      "third": {
+        "title": "GeoJson Features",
+        "description": "Aplikacja pobiera obiekty z OpenStreetMap przy użyciu interfejsu API OSM, konwertuje dane XML do formatu GeoJSON za pomocą pliku osmtogeojson.js i przetwarza je na listę obiektów GeoJSON do wykorzystania w interfejsie użytkownika sieci Web.",
+        "completionDate": "Maj 2021",
+        "imageAlt": "Wizualizacja mapy przedstawiająca dane geograficzne"
+      },
+      "fourth": {
+        "title": "Mars Robotic Moves",
+        "description": "Ten projekt to ćwiczenie kodowania mające na celu poprawę umiejętności czystego kodowania i abstrakcji poprzez symulację nawigacji robota na ograniczonej siatce reprezentującej Marsa. Roboty wykonują instrukcje (L, R, F), a roboty \"LOST\" pozostawiają zapach, aby zapobiec powtarzającym się upadkom. Program przetwarza każdego robota sekwencyjnie i wyprowadza ich ostateczne pozycje.",
+        "completionDate": "Lipiec 2022",
+        "imageAlt": "Robot poruszający się po siatce"
+      },
+      "fifth": {
+        "title": "Order Integration API",
+        "description": "Integration API to niewielkie rozwiązanie POC przeznaczone do przetwarzania zamówień po stronie dostawcy poprzez integrację plików płaskich, walidację cen, zarządzanie zapasami i komunikację z systemem ERP. System obsługuje dokumenty zamówień o stałej długości (pliki .sdf) i wykonuje kompleksowe przepływy pracy walidacji i przetwarzania.",
+        "completionDate": "Sierpień 2022",
+        "imageAlt": "Integracja danych i wizualizacja przepływu pracy"
+      },
+      "sixth": {
+        "title": "Smart Charging PoC",
+        "description": "Niewielka aplikacja POC z implementacją interfejsu API REST do zarządzania stacjami ładowania pojazdów elektrycznych, grupami i łącznikami z możliwością zarządzania pojemnością.",
+        "completionDate": "Listopad 2022",
+        "imageAlt": "Stacja ładowania pojazdów elektrycznych"
+      }
+    },
+    "freelance": {
+      "title": "Projekty Freelance",
+      "duration": "Czas trwania",
+      "first": {
+        "title": "Aplikacja internetowa Online Market",
+        "duration": "1 rok",
+        "description": "Opracowanie i opracowanie kompleksowego rozwiązania e-commerce dla startupu z branży spożywczej. Wdrożenie pełnego rozwoju przy użyciu ASP.NET MVC, stworzenie skalowalnej architektury, która obsługiwała zarządzanie zapasami, przetwarzanie zamówień i uwierzytelnianie użytkowników. Zaprojektowanie i wdrożenie interfejsów skierowanych do klienta oraz pulpitów administracyjnych, zapewniające płynne zakupy.",
+        "technologies": {
+          "first": "ASP.NET MVC",
+          "second": "SQL Server",
+          "third": "JavaScript",
+          "fourth": "Bootstrap",
+          "fifth": "Entity Framework"
+        }
+      },
+      "second": {
+        "title": "Orbit Krypto",
+        "duration": "2 miesiące",
+        "description": "Kierował rozwojem front-endu dla platformy kryptowalutowej specjalizującej się w uruchamianiu tokenów i operacjach finansowania. Zaprojektował solidne systemy integracji portfeli i wdrożył złożone interakcje blockchain przy użyciu React. Opracował intuicyjne interfejsy użytkownika do zarządzania tokenami, operacji finansowania i śledzenia kryptowalut w czasie rzeczywistym.",
+        "technologies": {
+          "first": "React",
+          "second": "Web3.js",
+          "third": "TypeScript",
+          "fourth": "Tailwind CSS",
+          "fifth": "Integracja MetaMask"
+        }
+      },
+      "third": {
+        "title": "Platforma Hurtowego E-commerce",
+        "duration": "1 rok",
+        "description": "Kierował pełnym rozwojem platformy hurtowego handlu elektronicznego, skupiając się na transakcjach B2B. Wdrożył złożone zapytania do bazy danych w celu przetwarzania zamówień zbiorczych i zintegrował wiele usług stron trzecich w celu przetwarzania płatności, wysyłki i zarządzania fakturami elektronicznymi. Opracował responsywne interfejsy użytkownika zoptymalizowane pod kątem operacji hurtowych.",
+        "technologies": {
+          "first": "ASP.NET Core",
+          "second": "React",
+          "third": "SQL Server",
+          "fourth": "Redis",
+          "fifth": "RESTful APIs"
+        }
+      }
+    },
+    "certificates": {
+      "title": "Certyfikaty",
+      "viewCredential": "Zobacz Certyfikat",
+      "showCredential": "Pokaż",
+      "button": {
+        "showMore": "Pokaż więcej",
+        "showLess": "Pokaż mniej"
+      },
+      "first": {
+        "title": "Certyfikat ASP .NET Web Application Development (.NET Core)",
+        "issuer": "Coder Bilişim Akademisi",
+        "date": "Od Września 2016 do Listopada 2016",
+        "skills": {
+            "first": ".NET Core",
+            "second": ".NET",
+            "third": "C#"
+          }
+      },
+      "second": {
+        "title": "Designing RESTful APIs",
+        "issuer": "LinkedIn",
+        "date": "Maj 2022",
+        "skills": {
+          "first": "Interfejsy API RESTful",
+          "second": "Projektowanie API",
+          "third": "OpenAPI"
+        }
+      },
+      "third": {
+        "title": "Certyfikat Microsoft SQL Server",
+        "issuer": "Coder Bilişim Akademisi",
+        "date": "Od Czerwca 2016 do Sierpnia 2016",
+        "skills": {
+          "first": "SQL Server",
+          "second": "SSMS",
+          "third": ".NET"
+        }
+      },
+      "fourth": {
+        "title": "Learning REST APIs",
+        "issuer": "LinkedIn",
+        "date": "Maj 2022",
+        "skills": {
+          "first": "Interfejsy API RESTful",
+          "second": "Projektowanie API"
+        }
+      },
+      "fifth": {
+        "title": "Asp .NET C#, SQL and Web Forms Software Specialist Certificate",
+        "issuer": "Vektörel Bilişim",
+        "date": "Od Stycznia 2015 do Lipca 2015",
+        "skills": {
+          "first": ".NET",
+          "second": "Web Forms",
+          "third": "SQL"
+        }
+      },
+      "sixth": {
+        "title": "HTTP Essential Training",
+        "issuer": "LinkedIn",
+        "date": "Maj 2022",
+        "skills": {
+          "first": "HTTP"
+        }
+      },
+      "seventh": {
+        "title": "What is Data Science?",
+        "issuer": "Coursera",
+        "date": "Luty 2020",
+        "skills": {
+          "first": "Nauka o danych",
+          "second": "Analiza danych"
+        }
+      },
+      "eighth": {
+        "title": "Certyfikat programowania C# .NET",
+        "issuer": "Coder Bilişim Akademisi",
+        "date": "Od Lipca 2016 do Września 2016",
+        "skills": {
+          "first": ".NET"
+        }
+      },
+      "ninth": {
+        "title": "Certyfikat projektowania stron internetowych",
+        "issuer": "Coder Bilişim Akademisi",
+        "date": "Od Maja 2016 do Lipca 2016",
+        "skills": {
+          "first": ".NET",
+          "second": "HTML",
+          "third": "CSS",
+          "fourth": "JavaScript"
+        }
+      }
+    },
+    "contact": {
+      "title": "Skontaktuj się z Nami",
+      "contactInformation": "Informacje Kontaktowe",
+      "letsConnect": "Połączmy się",
+      "messages": {
+        "errors": {
+          "allFieldsRequired": "Proszę wypełnić wszystkie pola",
+          "failedToSendMessage": "Nie udało się wysłać wiadomości. Spróbuj ponownie.",
+          "emptyMessage": "Pole wiadomości nie może być puste"
+        },
+        "success": {
+          "messageSent": "Wiadomość została wysłana pomyślnie!"
+        }
+      },
+      "form": {
+        "nationality": "Turecki",
+        "location": "Kraków, Polska",
+        "linkedinProfile": "Profil LinkedIn",
+        "subject": "Temat",
+        "email": "Twój adres email",
+        "mailContentPlaceholder": "Napisz swoją wiadomość tutaj..."
+      },
+      "buttons": {
+        "sendAsLinkedIn": "Wyślij Wiadomość LinkedIn",
+        "sendAsEmail": "Wyślij E-mail",
+        "sending": "Wysyłanie..."
+      }
+    },
+    "cvModal": {
+      "title": "Życiorys",
+      "downloadFileName": "Życiorys - Bekir Can Baykal.pdf",
+      "buttons": {
+        "previous": "Poprzedni",
+        "next": "Następny",
+        "close": "Zamknąć"
+      }
+    }
+  } 

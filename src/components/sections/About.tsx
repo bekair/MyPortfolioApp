@@ -3,30 +3,32 @@ import { motion } from 'framer-motion';
 import { FaGraduationCap, FaLaptopCode, FaUserTie } from 'react-icons/fa';
 import SectionTitle from '../common/SectionTitle';
 import { useTheme } from '../../context/ThemeContext';
+import { useTranslations } from 'next-intl';
 
 const About: React.FC = () => {
   const { theme } = useTheme();
+  const t = useTranslations("about");
   const highlights = [
     {
       icon: FaLaptopCode,
-      title: "Senior Software Engineer",
-      description: "Specialized in .NET Core and modern web technologies",
+      title: t('highlights.first.title'),
+      description: t('highlights.first.description'),
       color: "text-primary-500",
       bgColor: theme === 'dark' ? "bg-primary-900/20" : "bg-primary-50",
       borderColor: theme === 'dark' ? "border-primary-700" : "border-primary-200"
     },
     {
       icon: FaGraduationCap,
-      title: "MSc in Software Engineering",
-      description: "Middle East Technical University (METU)",
+      title: t('highlights.second.title'),
+      description: t('highlights.second.description'),
       color: "text-primary-500",
       bgColor: theme === 'dark' ? "bg-primary-900/20" : "bg-primary-50",
       borderColor: theme === 'dark' ? "border-primary-700" : "border-primary-200"
     },
     {
       icon: FaUserTie,
-      title: "10+ Years Experience",
-      description: "Building enterprise-level applications",
+      title: t('highlights.third.title'),
+      description: t('highlights.third.description'),
       color: "text-primary-500",
       bgColor: theme === 'dark' ? "bg-primary-900/20" : "bg-primary-50",
       borderColor: theme === 'dark' ? "border-primary-700" : "border-primary-200"
@@ -36,7 +38,7 @@ const About: React.FC = () => {
   return (
     <section id="about" className="section-container bg-theme">
       <motion.div className="max-w-6xl mx-auto">
-        <SectionTitle title="About Me" />
+        <SectionTitle title={t('title')} />
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {highlights.map((item, index) => (
@@ -57,6 +59,7 @@ const About: React.FC = () => {
                 duration-300 
                 transform 
                 hover:-translate-y-1
+                content-center
               `}
             >
               <div className="flex items-center gap-4">
@@ -76,13 +79,13 @@ const About: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div className="space-y-6">
             <motion.p className="text-lg leading-relaxed text-theme-secondary">
-              I am a Senior Software Engineer with over 10 years of experience in developing enterprise-level applications. My expertise lies in .NET Core, React, and modern web technologies.
+              {t('mainContent.part1')}
             </motion.p>
             <motion.p className="text-lg leading-relaxed text-theme-secondary">
-              Throughout my career, I've worked on various projects ranging from e-commerce platforms to complex system integrations. I'm passionate about creating efficient, scalable solutions that solve real-world problems.
+              {t('mainContent.part2')}
             </motion.p>
             <motion.p className="text-lg leading-relaxed text-theme-secondary">
-              I hold a Master's degree in Software Engineering from Middle East Technical University, where I deepened my understanding of software architecture and design patterns.
+              {t('mainContent.part3')}
             </motion.p>
           </motion.div>
 
@@ -100,7 +103,7 @@ const About: React.FC = () => {
             } transform rotate-6`} />
             <img
               src="/images/profile.jpeg"
-              alt="Profile"
+              alt={t('altProfileImage')}
               className="relative rounded-3xl shadow-lg w-full h-auto object-cover aspect-[4/5]"
             />
           </motion.div>

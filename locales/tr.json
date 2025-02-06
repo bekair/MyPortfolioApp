@@ -1,0 +1,366 @@
+{
+  "nav": {
+    "portfolio": "Portfolyo",
+    "home": "Ana Sayfa",
+    "about": "Hakkımda",
+    "skills": "Yetenekler",
+    "experiences": "Deneyimler",
+    "projects": "Projeler",
+    "freelance": "Freelance",
+    "certificates": "Sertifikalar",
+    "contact": "İletişim",
+    "more": "Daha Fazla"
+  },
+  "footer": {
+    "copyright": "Tüm hakları saklıdır.",
+    "specialty": "Kıdemli Yazılım Mühendisi"
+  },
+  "hero": {
+    "greeting": "Merhaba, Ben",
+    "name": "Bekir Can Baykal",
+    "titles": {
+      "specialty1": "Kıdemli Yazılım Mühendisiyim",
+      "specialty2": "Kıdemli .NET Geliştiriciyim",
+      "specialty3": "Kıdemli Full Stack Geliştiriciyim (React)"
+    },
+    "buttons": {
+      "viewProjects": "Projeleri Gör",
+      "contactMe": "İletişime Geç",
+      "cv": "Özgeçmiş"
+    }
+  },
+  "about": {
+    "title": "Hakkımda",
+    "altProfileImage": "Profil Resmi",
+    "highlights": {
+      "first": {
+        "title": "Kıdemli Yazılım Mühendisiyim",
+        "description": ".NET Core ve modern web teknolojilerinde uzmanlaşmış bir yazılım mühendisiyim."
+      },
+      "second": {
+        "title": "MSc Yazılım Mühendisliği",
+        "description": "Orta Doğu Teknik Üniversitesi (ODTÜ)"
+      },
+      "third": {
+        "title": "10+ Yıllık Deneyim",
+        "description": "Kurumsal Düzeyde Uygulamalar geliştirilmesine katkıda bulunuyorum"
+      }
+    },
+    "mainContent": {
+      "part1": "Kurumsal düzeyde uygulamalar geliştirmede 10 yılı aşkın deneyime sahip bir Kıdemli Yazılım Mühendisiyim. .NET Core, React ve modern web teknolojilerinde uzmanım.",
+      "part2": "Kariyerim boyunca e-ticaret platformlarından karmaşık sistem entegrasyonlarına kadar çeşitli projeler üzerinde çalıştım. Gerçek dünya sorunlarını çözen verimli, ölçeklenebilir çözümler yaratma konusunda tutkuluyum.",
+      "part3": "Orta Doğu Teknik Üniversitesi'nden Yazılım Mühendisliği alanında yüksek lisans derecesi aldım ve burada yazılım mimarisi ve tasarım kalıpları konusundaki yeteneklerimi geliştirdim."
+    }
+  },
+  "skills": {
+    "title": "Yetenekler & Uzmanlıklar",
+    "categories":{
+      "first":{
+        "title": "Backend Geliştirme"
+      },
+      "second":{
+        "title": "Frontend Geliştirme"
+      },
+      "third":{
+        "title": "DevOps & Araçlar"
+      }
+    },
+    "timeline":{
+      "first":{
+        "area": ".NET Geliştirme",
+        "description": "Entreprise Uygulamalar & API'lar"
+      },
+      "second":{
+        "area": "Frontend Geliştirme",
+        "description": "React & Modern JavaScript"
+      },
+      "third":{
+        "area": "DevOps & Bulut",
+        "description": "Azure & CI/CD Pipeline'ları"
+      }
+    } 
+  },
+  "experiences": {
+    "title": "Profesyonel Yolculuk",
+    "first": {
+      "position": "Kıdemli Yazılım Mühendisi",
+      "duration": "Temmuz 2022 - Şimdi",
+      "descriptions": {
+        "first": "Gemiler birden fazla motorla donatılmış ve belirli aralıklarla veri gönderiyor. Uygulama, gemilerden gelen zaman serisi verilerini analiz ediyor. Algoritmalarımız bu verileri sürekli olarak değerlendiriyor ve öneriler üretmek için kullanıyor.",
+        "second": "Tekomar XPERT ürününün geliştirilmesi ve bakımında yer almak.",
+        "third": "Müşterinin özel gereksinimlerini karşılamak için TimeSeries uygulamasını yeniden düzenleme.",
+        "fourth": "Docker kullanarak yeni geliştirilen uygulamayı dockerize etme.",
+        "fifth": "İntranet sunucusunda Docker container'ını deploy etme ve bu ortamdaki değerlendirmeleri yapma."
+      },
+      "technologies": {
+        "first": "C#", 
+        "second": ".NET", 
+        "third": "REST API'lar", 
+        "fourth": "Scrum", 
+        "fifth": "Azure DevOps Server",
+        "sixth": "Docker", 
+        "seventh": "Microsoft SQL Server", 
+        "eighth": "React.js", 
+        "ninth": ".NET Core", 
+        "tenth": "Git", 
+        "eleventh": "Microsoft Azure", 
+        "twelfth": "Entity Framework (EF) Core",
+        "thirteenth": "JIRA", 
+        "fourteenth": "Docker"
+      }
+    },
+    "second": {
+      "position": "Kıdemli Yazılım Mühendisi & Teknoloji Lideri",
+      "duration": "Mayıs 2021 - Temmuz 2022 · 1 yıl 3 ay",
+      "descriptions": {
+        "first": "Takım lideri olduğum beş kişilik bir yazılım geliştirme takımı ile birlikte, Scrum yöntemini uygulayarak üç proje geliştirildi: Proje Yönetimi Planı projesi, Önceliklendirme ve Performans projeleri.",
+        "second": "Bir yıl içinde tüm projeler '.NET Core 5, React, Redux Toolkit, PostGre SQL, ve Material UI' teknolojileri kullanılarak başarıyla teslim edildi.",
+        "third": "Müşteri ilişkileri ve takım koordinasyonunu etkili bir şekilde yönetildi.",
+        "fourth": "Özellikle .NET Geliştirmede müşteriye değerli bir danışmanlık sağlandı.",
+        "fifth": "Türkiye'nin önemli firmalarından biri olan Aselsan'a danışmanlık yapıldı."
+      },
+      "technologies": {
+        "first": ".NET", 
+        "second": ".NET Core", 
+        "third": "REST API'lar", 
+        "fourth": "JavaScript", 
+        "fifth": "Redux", 
+        "sixth": "Takım Liderliği", 
+        "seventh": "PostgreSQL", 
+        "eighth": "React.js"
+      }
+    },
+    "third": {
+      "position": "Yazılım Mühendisi",
+      "duration": "Temmuz 2018 - Mayıs 2021 · ~3 yıl",
+      "descriptions": {
+        "first": "Çevre ve Şehircilik Bakanlığı için .Net MVC, MSSql DB ve JavaScript kullanarak bir afet risk yönetim sistemi üzerine çalışıldı (Eylül 2020 - Mayıs 2021).",
+        "second": "Türkiye Sayıştayı için .Net MVC 5, Oracle DB, MSSql DB, Postgre SQL, JavaScript ve jQuery kullanılarak bir personel yönetim sisteminin geliştirilmesine ve bakımına katkıda bulunuldu (Şubat 2020 - Eylül 2020).",
+        "third": "React ve JavaScript kullanılarak, özellikle bir Harita Widget'ı olmak üzere, GIS odaklı bir web uygulaması üzerinde çalışıldı. (Mayıs 2019 - Şubat 2020).",
+        "fourth": "Birim testleri gerçekleştirildi, SonarQube tarafından belirlenen sorunlar giderildi, Single Responsibility için methodlar ve class'lar yeniden düzenlendi ve kod Java 8'e yükseltildi (Temmuz 2018 - Mayıs 2019).",
+        "fifth": "Havelsan'da dış kaynaklı bir proje için Java'da bir GIS projesinin yeniden düzenlenmesine öncülük edildi (Temmuz 2018 - Mayıs 2019)."
+      },
+      "technologies": {
+        "first": ".NET", 
+        "second": ".NET Core", 
+        "third": ".NET MVC", 
+        "fourth": "REST APIs", 
+        "fifth": "JavaScript", 
+        "sixth": "MsSQL", 
+        "seventh": "PostgreSQL", 
+        "eighth": "JIRA"
+      }
+    }
+  },
+  "projects": {
+    "title": "Öne Çıkan Projeler",
+    "viewCode": "Kodu Gör",
+    "first": {
+      "title": "BookStore",
+      "description": "MSc. Yazılım Mühendisliği Yüksek Lisans Projesi olarak geliştirilmiş bir kitap satın alma, ikinci el kitap satışı ve sipariş verme uygulamasıdır. Projede bir dizi teknoloji kullanıldı ve yazılım geliştirme, mimari tasarım ve proje yönetimi kabiliyetleri geliştirildi.",
+      "completionDate": "Ocak 2020",
+      "imageAlt": "Kitapçı"
+    },
+    "second": {
+      "title": "Assets API",
+      "description": "Bu proje, pazarında farklı varlıklar hakkında bilgi sağlayan basit bir uygulamadır. Uygulama, varlık bilgilerini bir CSV dosyasından okur ve varlık yönetimi için çeşitli uç noktalar sağlar. Varlıklar, adı ve ID'ye göre tanımlanır, her varlık ayrıca önceden tanımlanmış bir özellik listesiyle açıklanır.",
+      "completionDate": "Ocak 2021",
+      "imageAlt": "Dijital varlık görüntüleme"
+    },
+    "third": {
+      "title": "GeoJson Features",
+      "description": "OpenStreetMap API kullanarak harita özelliklerini alan uygulama, XML verilerini osmtogeojson.js ile GeoJSON formatına dönüştürüyor ve Web UI için GeoJSON özelliklerinin bir listesine çeviriyor.",
+      "completionDate": "Mayıs 2021",
+      "imageAlt": "Harita görüntüleme ve coğrafi verileri temsil eden bir resim"
+    },
+    "fourth": {
+      "title": "Mars Robotic Moves",
+      "description": "Bu proje, temiz kodlama ve soyutlama becerilerini geliştirmek için bir kodlama alıştırmasıdır. Robotlar, Mars'ı temsil eden sınırlı bir grid üzerinde hareket ederler. Robotlar, komutları (L, R, F) takip ederler, \"LOST\" robotlar ise tekrar düşmekten kaçınmak için bir koku bırakır. Program, robotları sıralı olarak işler ve son konumlarını çıkarır.",
+      "completionDate": "Temmuz 2022",
+      "imageAlt": "Robotlar, bir grid üzerinde yolculuk ediyor"
+    },
+    "fifth": {
+      "title": "Order Integration API",
+      "description": "Entegrasyon API'si, dosya entegrasyonu, fiyat doğrulaması, stok yönetimi ve ERP sistemi iletişimi yoluyla tedarikçi tarafındaki siparişleri işlemek için tasarlanmış küçük bir POC çözümüdür. Sistem, sabit uzunluktaki sipariş belgelerini (.sdf dosyaları) işler ve kapsamlı doğrulama ve işleme iş akışları gerçekleştirir.",
+      "completionDate": "Ağustos 2022",
+      "imageAlt": "Veri entegrasyonu ve iş akışı görüntüleme"
+    },
+    "sixth": {
+      "title": "Smart Charging PoC",
+      "description": "Elektrik araba şarj istasyonlarını, gruplarını ve kapasite yönetimini yönetmek için RESTful API uygulaması ile küçük bir POC uygulamasıdır.",
+      "completionDate": "Kasım 2022",
+      "imageAlt": "Elektrik araba şarj istasyonu"
+    }
+  },
+  "freelance": {
+    "title": "Freelance Projeleri",
+    "duration": "Süre",
+    "first": {
+      "title": "Online Market Web Uygulaması",
+      "duration": "1 yıl",
+      "description": "Kapsamlı bir e-ticaret çözümü tasarlayıp geliştirilmesine katkı sağladım. ASP.NET MVC kullanarak ölçeklenebilir bir mimari oluşturdum. Bu mimari, envanter yönetimi, sipariş işleme ve kullanıcı kimlik doğrulamasını işlerken hem müşteri hem yönetici arayüzlerini tasarlayıp uyguladım, böylece kullanıcıların rahat bir alışveriş deneyimi yaşaması sağlandı.",
+      "technologies": {
+        "first": "ASP.NET MVC",
+        "second": "SQL Server",
+        "third": "JavaScript",
+        "fourth": "Bootstrap",
+        "fifth": "Entity Framework"
+      }
+    },
+    "second": {
+      "title": "Orbit Kripto Platformu",
+      "duration": "2 ay",
+      "description": "Bir kripto platformu için ön uç geliştirme yapılmasına katkı sağladım. Bu platform, token launch ve finansman işlemlerini öne çıkaran bir kripto platformudur. Cüzdan entegrasyonları tasarlanmasına ve React kullanarak karmaşık blok zincir etkileşimlerinin uygulanmasına katkı sağladım. Token yönetimi, finansman işlemleri ve gerçek zamanlı kripto para takibi için sezgisel kullanıcı arayüzleri tasarlanması üzerine çalıştım.",
+      "technologies": {
+        "first": "React",
+        "second": "Web3.js",
+        "third": "TypeScript",
+        "fourth": "Tailwind CSS",
+        "fifth": "MetaMask Entegrasyonu"
+      }
+    },
+    "third": {
+      "title": "Toptan E-Ticaret Platformu",
+      "duration": "1 yıl 2 ay",
+      "description": "B2B işlemlerine odaklanan bir toptan e-ticaret platformu geliştirilmesine katkı sağladım. Karmaşık veritabanı sorgularının uygulanmasına ve çeşitli üçüncü taraf hizmetlerin entegre edilmesinde çalıştım. Kullanıcı arayüzlerinin geliştirilmesine katkı sağladım.",
+      "technologies": {
+        "first": "ASP.NET Core",
+        "second": "React",
+        "third": "SQL Server",
+        "fourth": "Redis",
+        "fifth": "RESTful API'lar"
+      }
+    }
+  },
+  "certificates": {
+    "title": "Sertifikalar",
+    "viewCredential": "Sertifikayı Gör",
+    "showCredential": "Görüntüle",
+    "button": {
+      "showMore": "Daha Fazla",
+      "showLess": "Daha Az"
+    },
+    "first": {
+      "title": "ASP .NET Web Application Development (.NET Core) Sertifikası",
+      "issuer": "Coder Bilişim Akademisi",
+      "date": "Eylül 2016 - Kasım 2016",
+      "skills": {
+          "first": ".NET Core",
+          "second": ".NET",
+          "third": "C#"
+        }
+    },
+    "second": {
+      "title": "RESTful API'lar",
+      "issuer": "LinkedIn",
+      "date": "Mayıs 2022",
+      "skills": {
+        "first": "RESTful API'lar",
+        "second": "API Tasarımı",
+        "third": "OpenAPI"
+      }
+    },
+    "third": {
+      "title": "Microsoft SQL Server Sertifikası",
+      "issuer": "Coder Bilişim Akademisi",
+      "date": "Haziran 2016 - Ağustos 2016",
+      "skills": {
+        "first": "SQL Server",
+        "second": "SSMS",
+        "third": ".NET"
+      }
+    },
+    "fourth": {
+      "title": "Learning REST APIs",
+      "issuer": "LinkedIn",
+      "date": "Mayıs 2022",
+      "skills": {
+        "first": "RESTful API'lar",
+        "second": "API Tasarımı"
+      }
+    },
+    "fifth": {
+      "title": "Asp .NET C#, SQL ve Web Forms Yazılım Uzmanı Sertifikası",
+      "issuer": "Vektörel Bilişim",
+      "date": "Ocak 2015 - Temmuz 2015",
+      "skills": {
+        "first": ".NET",
+        "second": "Web Forms",
+        "third": "SQL"
+      }
+    },
+    "sixth": {
+      "title": "HTTP Essential Training",
+      "issuer": "LinkedIn",
+      "date": "Mayıs 2022",
+      "skills": {
+        "first": "HTTP"
+      }
+    },
+    "seventh": {
+      "title": "What is Data Science?",
+      "issuer": "Coursera",
+      "date": "Şubat 2020",
+      "skills": {
+        "first": "Veri Bilimi",
+        "second": "Veri Analizi"
+      }
+    },
+    "eighth": {
+      "title": "C# .NET Programlama Sertifikası",
+      "issuer": "Coder Bilişim Akademisi",
+      "date": "Temmuz 2016 - Eylül 2016",
+      "skills": {
+        "first": ".NET"
+      }
+    },
+    "ninth": {
+      "title": "Web Tasarım Sertifikası",
+      "issuer": "Coder Bilişim Akademisi",
+      "date": "Mayıs 2016 - Temmuz 2016",
+      "skills": {
+        "first": ".NET",
+        "second": "HTML",
+        "third": "CSS",
+        "fourth": "JavaScript"
+      }
+    }
+  },
+  "contact": {
+    "title": "İletişime Geç",
+    "contactInformation": "İletişim Bilgileri",
+    "letsConnect": "Bağlantı Kuralım",
+    "messages": {
+      "errors": {
+        "allFieldsRequired": "Lütfen tüm alanları doldurun",
+        "failedToSendMessage": "Mesaj gönderilirken hata oluştu. Lütfen tekrar deneyin.",
+        "emptyMessage": "Mesaj alanı boş bırakılamaz"
+      },
+      "success": {
+        "messageSent": "Mesaj başarıyla gönderildi!"
+      }
+    },
+    "form": {
+      "nationality": "Türk",
+      "location": "Krakov, Polonya",
+      "linkedinProfile": "LinkedIn Profili",
+      "subject": "Konu",
+      "email": "E-posta Adresiniz",
+      "mailContentPlaceholder": "Mesajınızı buraya yazın..."
+    },
+    "buttons": {
+      "sendAsLinkedIn": "LinkedIn Mesajı Gönder",
+      "sendAsEmail": "E-posta Gönder",
+      "sending": "Gönderiliyor..."
+    }
+  },
+  "cvModal": {
+    "title": "Özgeçmiş",
+    "downloadFileName": "Özgeçmiş - Bekir Can Baykal.pdf",
+    "buttons": {
+      "previous": "Önceki",
+      "next": "Sonraki",
+      "close": "Kapat"
+    }
+  }
+} 

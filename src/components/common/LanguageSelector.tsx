@@ -1,19 +1,18 @@
+"use client";
+
 import React, { useState } from 'react';
-import { useLanguage } from '../../context/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import ReactCountryFlag from "react-country-flag";
+import { useLocale } from 'next-intl';
+import { usePathname, Link } from '@/i18n/routing';
+import { languages } from '@/i18n/languages';
 
 const LanguageSelector: React.FC = () => {
-  const { language, setLanguage } = useLanguage();
   const [isOpen, setIsOpen] = useState(false);
+  const currentLocale = useLocale();
+  const pathname = usePathname();
 
-  const languages = [
-    { code: 'en', name: 'English', countryCode: 'GB' },
-    { code: 'tr', name: 'Türkçe', countryCode: 'TR' },
-    { code: 'nl', name: 'Nederlands', countryCode: 'NL' }
-  ];
-
-  const selectedLang = languages.find(lang => lang.code === language);
+  const selectedLang = languages.find(lang => lang.code === currentLocale);
 
   return (
     <div className="relative">
@@ -46,18 +45,15 @@ const LanguageSelector: React.FC = () => {
             onMouseLeave={() => setIsOpen(false)}
           >
             {languages.map((lang) => (
-              <motion.button
+              <Link
                 key={lang.code}
-                onClick={() => {
-                  setLanguage(lang.code as 'en' | 'tr' | 'nl');
-                  setIsOpen(false);
-                }}
+                href={pathname}
+                locale={lang.code}
                 className={`flex items-center gap-2 w-full px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 ${
-                  language === lang.code 
+                  currentLocale === lang.code 
                     ? 'text-primary-600 dark:text-primary-400 font-medium' 
                     : 'text-gray-700 dark:text-gray-300'
                 }`}
-                whileHover={{ x: 5 }}
               >
                 <ReactCountryFlag
                   countryCode={lang.countryCode}
@@ -68,7 +64,7 @@ const LanguageSelector: React.FC = () => {
                   }}
                 />
                 <span>{lang.name}</span>
-              </motion.button>
+              </Link>
             ))}
           </motion.div>
         )}

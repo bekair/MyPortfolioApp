@@ -1,56 +1,58 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaEnvelope, FaLinkedin, FaExclamationCircle, FaMapMarkerAlt, FaIdCard, FaCheckCircle } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin, FaMapMarkerAlt, FaIdCard } from 'react-icons/fa';
 import SectionTitle from '../common/SectionTitle';
 import { useTheme } from '../../context/ThemeContext';
 import ReactCountryFlag from 'react-country-flag';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 
+import { useTranslations } from 'next-intl';
+
 const Contact: React.FC = () => {
   const { theme } = useTheme();
   const [message, setMessage] = useState('');
   const [senderEmail, setSenderEmail] = useState('');
   const [showEmailInput, setShowEmailInput] = useState(false);
-  const [showError, setShowError] = useState(false);
   const [sending, setSending] = useState(false);
-  const [showSuccess, setShowSuccess] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
   const [subject, setSubject] = useState('');
+  const t = useTranslations("contact");
 
   const handleSendLinkedIn = () => {
     if (!message.trim()) {
-      setShowError(true);
-      setTimeout(() => setShowError(false), 3000);
+      toast.error(t("messages.errors.emptyMessage"));
       return;
     }
-    
+
     const linkedinMessageUrl = `https://www.linkedin.com/messaging/compose?recipient=bekir-can-baykal-msc-1545157b&body=${encodeURIComponent(message)}`;
     window.open(linkedinMessageUrl, '_blank', 'noopener,noreferrer');
   };
 
   const handleSendEmail = async () => {
     if (!message.trim() || !senderEmail.trim() || !subject.trim()) {
-      toast.error('Please fill in all fields');
+      toast.error(t("messages.errors.allFieldsRequired"));
       return;
     }
 
     setSending(true);
     try {
-      await axios.post('/api/send-email', {
+      const response = await axios.post('/api/send-email', {
         message,
         senderEmail,
         subject,
       });
 
-      setMessage('');
-      setSenderEmail('');
-      setSubject('');
-      setShowEmailInput(false);
-      toast.success('Message sent successfully!');
+      if (response.status === 200) {
+        setMessage('');
+        setSenderEmail('');
+        setSubject('');
+        setShowEmailInput(false);
+        toast.success(t("messages.success.messageSent"));
+      } else {
+        toast.error(t("messages.errors.failedToSendMessage"));
+      }
     } catch (error) {
-      console.error('Error:', error);
-      toast.error('Failed to send email. Please try again.');
+      toast.error(t("messages.errors.failedToSendMessage"));
     } finally {
       setSending(false);
     }
@@ -60,7 +62,7 @@ const Contact: React.FC = () => {
     <section id="contact" className={`section-container ${
       theme === 'dark' ? 'bg-gray-900' : 'bg-white'
     }`}>
-      <SectionTitle title="Get In Touch" />
+      <SectionTitle title={t("title")} />
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Side - Contact Info */}
@@ -75,10 +77,11 @@ const Contact: React.FC = () => {
             <h3 className={`text-2xl font-bold mb-6 ${
               theme === 'dark' ? 'text-gray-100' : 'text-gray-900'
             }`}>
-              Contact Information
+              {t("contactInformation")}
             </h3>
             <div className="space-y-6">
               <div className="flex items-center gap-4">
+
                 <div className={`text-2xl ${
                   theme === 'dark' ? 'text-primary-400' : 'text-primary-600'
                 }`}>
@@ -86,7 +89,7 @@ const Contact: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <p className={theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}>
-                    Turkish
+                    {t("form.nationality")}
                   </p>
                   <ReactCountryFlag
                     countryCode="TR"
@@ -107,10 +110,10 @@ const Contact: React.FC = () => {
                   <FaMapMarkerAlt />
                 </div>
                 <p className={theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}>
-                  Kraków, Poland
+                  {t("form.location")}
                 </p>
               </div>
-              
+
               <div className="flex items-center gap-4">
                 <div className={`text-2xl ${
                   theme === 'dark' ? 'text-primary-400' : 'text-primary-600'
@@ -141,7 +144,7 @@ const Contact: React.FC = () => {
                     theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
                   }`}
                 >
-                  LinkedIn Profile
+                  {t("form.linkedinProfile")}
                 </a>
               </div>
             </div>
@@ -161,7 +164,7 @@ const Contact: React.FC = () => {
                 theme === 'dark' ? 'text-gray-100' : 'text-gray-900'
               }`}>
                 <span className="bg-gradient-to-r from-primary-500 to-primary-400 bg-clip-text text-transparent">
-                  Let's connect
+                  {t("letsConnect")}
                 </span>
               </h3>
               <div className={`flex-grow h-0.5 ${
@@ -175,7 +178,6 @@ const Contact: React.FC = () => {
                 } />
               </div>
             </div>
-
             <div className="space-y-6">
               <AnimatePresence>
                 {showEmailInput && (
@@ -189,7 +191,7 @@ const Contact: React.FC = () => {
                         type="text"
                         value={subject}
                         onChange={(e) => setSubject(e.target.value)}
-                        placeholder="Subject"
+                        placeholder={t("form.subject")}
                         className={`w-full p-4 rounded-xl ${
                           theme === 'dark'
                             ? 'bg-gray-700 text-gray-100 placeholder-gray-400'
@@ -206,7 +208,7 @@ const Contact: React.FC = () => {
                         type="email"
                         value={senderEmail}
                         onChange={(e) => setSenderEmail(e.target.value)}
-                        placeholder="Your email address"
+                        placeholder={t("form.email")}
                         className={`w-full p-4 rounded-xl ${
                           theme === 'dark'
                             ? 'bg-gray-700 text-gray-100 placeholder-gray-400'
@@ -221,7 +223,7 @@ const Contact: React.FC = () => {
               <textarea
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                placeholder="Write your message here..."
+                placeholder={t("form.mailContentPlaceholder")}
                 rows={6}
                 className={`w-full h-32 p-4 rounded-xl resize-none ${
                   theme === 'dark'
@@ -229,35 +231,7 @@ const Contact: React.FC = () => {
                     : 'bg-gray-50 text-gray-900 placeholder-gray-500'
                 } focus:ring-2 focus:ring-primary-500 outline-none`}
               />
-
-              <AnimatePresence>
-                {showError && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="text-red-500 text-sm flex items-center gap-2"
-                  >
-                    <FaExclamationCircle />
-                    <span>{errorMessage}</span>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-
-              <AnimatePresence>
-                {showSuccess && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 10 }}
-                    className="text-green-500 text-sm flex items-center gap-2"
-                  >
-                    <FaCheckCircle />
-                    <span>Message sent successfully!</span>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-
+              
               <div className="flex flex-col lg:flex-row gap-4">
                 <motion.button
                   onClick={() => {
@@ -274,7 +248,7 @@ const Contact: React.FC = () => {
                     } text-white font-light transition-all`}
                 >
                   <FaLinkedin className="flex-shrink-0" />
-                  <span className="whitespace-normal text-center text-sm">Send as LinkedIn Message</span>
+                  <span className="whitespace-normal text-center text-sm">{t("buttons.sendAsLinkedIn")}</span>
                 </motion.button>
 
                 {!showEmailInput ? (
@@ -294,16 +268,16 @@ const Contact: React.FC = () => {
                       } font-light transition-all`}
                   >
                     <FaEnvelope className="flex-shrink-0" />
-                    <span className="whitespace-normal text-center text-sm">Send Email</span>
+                    <span className="whitespace-normal text-center text-sm">{t("buttons.sendAsEmail")}</span>
                   </motion.button>
                 ) : (
                   <motion.button
                     onClick={handleSendEmail}
-                    disabled={!message.trim() || !senderEmail.trim() || sending}
+                    disabled={!message.trim() || !senderEmail.trim() || !subject.trim() || sending}
                     whileHover={message.trim() && senderEmail.trim() && !sending ? { scale: 1.05 } : undefined}
                     whileTap={message.trim() && senderEmail.trim() && !sending ? { scale: 0.95 } : undefined}
                     className={`w-full flex items-center justify-center gap-2 px-6 py-3 rounded-full
-                      ${!message.trim() || !senderEmail.trim() || sending
+                      ${!message.trim() || !senderEmail.trim() || !subject.trim() || sending
                         ? 'opacity-50 cursor-not-allowed border-2 border-gray-400 text-gray-400'
                         : `border-2 border-primary-600 ${
                             theme === 'dark'
@@ -313,7 +287,7 @@ const Contact: React.FC = () => {
                       } font-light transition-all`}
                   >
                     <FaEnvelope className="flex-shrink-0" />
-                    <span className="text-sm">{sending ? 'Sending...' : 'Send Email'}</span>
+                    <span className="text-sm">{sending ? t("buttons.sending") : t("buttons.sendAsEmail")}</span>
                   </motion.button>
                 )}
               </div>

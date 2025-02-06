@@ -1,0 +1,366 @@
+{
+  "nav": {
+    "portfolio": "Portfolio",
+    "home": "Home",
+    "about": "Over Mij",
+    "skills": "Vaardigheden",
+    "experiences": "Ervaringen",
+    "projects": "Projecten",
+    "freelance": "Freelance",
+    "certificates": "Certificaten",
+    "contact": "Contact",
+    "more": "Meer"
+  },
+  "footer": {
+    "copyright": "Alle rechten voorbehouden.",
+    "specialty": "Senior Software-Ingenieur"
+  },
+  "hero": {
+    "greeting": "Hoi, Ik ben",
+    "name": "Bekir Can Baykal",
+    "titles": {
+      "specialty1": "Senior Software-Ingenieur",
+      "specialty2": "Senior .NET Ontwikkelaar",
+      "specialty3": "SeniorFull Stack Ontwikkelaar (React)"
+    },
+    "buttons": {
+      "viewProjects": "Bekijk Projecten",
+      "contactMe": "Neem Contact Op",
+      "cv": "CV"
+    }
+  },
+  "about": {
+    "title": "Over Mij",
+    "altProfileImage": "Profielfoto",
+    "highlights": {
+      "first": {
+        "title": "Senior Software-Ingenieur",
+        "description": "Gespecialiseerd in .NET Core en moderne webtechnologieën"
+      },
+      "second": {
+        "title": "MSc in software-engineering",
+        "description": "Technische Universiteit Midden-Oosten (METU)"
+      },
+      "third": {
+        "title": "10+ Jaar Ervaring",
+        "description": "Bouw applicaties van ondernemingskwaliteit"
+      }
+    },
+    "mainContent": {
+      "part1": "Ik ben een Senior Software Engineer met meer dan 10 jaar ervaring in het ontwikkelen van applicaties op ondernemingsniveau. Mijn expertise ligt in .NET Core, React en moderne webtechnologieën.",
+      "part2": "Gedurende mijn carrière heb ik aan verschillende projecten gewerkt, variërend van e-commerceplatforms tot complexe systeemintegraties. Ik ben gepassioneerd over het creëren van efficiënte, schaalbare oplossingen die echte problemen oplossen.",
+      "part3": "Ik heb een masterdiploma in software-engineering behaald aan de Middle East Technical University, waar ik mijn kennis van softwarearchitectuur en ontwerppatronen heb verdiept."
+    }
+  },
+  "skills": {
+    "title": "Vaardigheden & Expertise",
+    "categories":{
+      "first":{
+        "title": "Backend Ontwikkeling"
+      },
+      "second":{
+        "title": "Frontend Ontwikkeling"
+      },
+      "third":{
+        "title": "DevOps & Hulpprogramma's"
+      }
+    },
+    "timeline":{
+      "first":{
+        "area": ".NET Ontwikkeling",
+        "description": "Entreprise Applicaties & API's"
+      },
+      "second":{
+        "area": "Frontend Ontwikkeling",
+        "description": "React & Moderne JavaScript"
+      },
+      "third":{
+        "area": "DevOps & Cloud",
+        "description": "Azure & CI/CD-pijplijnen"
+      }
+    }
+  },
+  "experiences": {
+    "title": "Professionele Carrière",
+    "first": {
+      "position": "Senior Software-Ingenieur",
+      "duration": "Juli 2022 - Present",
+      "descriptions": {
+        "first": "De vaartuigen zijn uitgerust met meerdere motoren en sturen data op gespecificeerde intervallen. De app analyseert de tijdreeksdata van de geconfigureerde vaartuigen. Onze algoritmes evalueren deze data continu en gebruiken deze om aanbevelingen te genereren.",
+        "second": "Betrokken bij de ontwikkeling en het onderhoud van het Tekomar XPERT-product.",
+        "third": "Het refactoren van de TimeSeries-implementatie om te voldoen aan de specifieke vereisten van een klant.",
+        "fourth": "Containeriseren van de nieuw ontwikkelde aanpak met behulp van Docker.",
+        "fifth": "Het Docker-image implementeren op een intranetserver en evaluaties uitvoeren binnen die omgeving."
+      },
+      "technologies": {
+        "first": "C#", 
+        "second": ".NET", 
+        "third": "REST APIs", 
+        "fourth": "Scrum", 
+        "fifth": "Azure DevOps Server",
+        "sixth": "Docker", 
+        "seventh": "Microsoft SQL Server", 
+        "eighth": "React.js", 
+        "ninth": ".NET Core", 
+        "tenth": "Git", 
+        "eleventh": "Microsoft Azure", 
+        "twelfth": "Entity Framework (EF) Core",
+        "thirteenth": "JIRA", 
+        "fourteenth": "Docker"
+      }
+    },
+    "second": {
+      "position": "Senior Software-Ingenieur Technisch Leider",
+      "duration": "Mei 2021 - Juli 2022 · 1 jaar 3 maanden",
+      "descriptions": {
+        "first": "Als teamleider, werkte samen met een team van vijf individuen, het Scrum-methodologie toepast om drie projecten te ontwikkelen: Project Management Plan project, Prioritization, en Performance.",
+        "second": "Alle drie projecten zijn binnen een jaar succesvol afgerond, waarbij gebruik is gemaakt van de volgende technologieën: .NET Core 5, React, Redux Toolkit, PostGre SQL en Material UI.",
+        "third": "Beide klantrelaties en teamcoördinatie zijn effectief gemanaged.",
+        "fourth": "Heeft waardevolle consultancy geleverd aan de klant, specifiek gericht op .NET-ontwikkeling.",
+        "fifth": "Ondersteunde de klant, Aselsan, een van de belangrijkste verdedigingsbedrijven in Turkije, in het bereiken van hun projectdoelen en eisen."
+      },
+      "technologies": {
+        "first": ".NET", 
+        "second": ".NET Core", 
+        "third": "REST APIs", 
+        "fourth": "JavaScript", 
+        "fifth": "Redux", 
+        "sixth": "Team Leadership", 
+        "seventh": "PostgreSQL", 
+        "eighth": "React.js"
+      }
+    },
+    "third": {
+      "position": "Software-Ingenieur",
+      "duration": "Juli 2018 - Mei 2021 · 3 jaar",
+      "descriptions": {
+        "first": "Ontwikkelde en onderhield een risicobeheersingssysteem voor het Ministerie van Omgeving en Stedenbouw met .NET MVC, MSSql DB en JavaScript (September 2020 - Mei 2021).",
+        "second": "Heeft bijgedragen aan de ontwikkeling en het onderhoud van een personeelsbeheersysteem voor het Turkse Gerechtshof van de Accounten (Februari 2020 - September 2020).",
+        "third": "Werkte aan een webtoepassing met GIS-focus, specifiek een Map Widget, gebruikmakend van React en JavaScript (Mei 2019 - Februari 2020).",
+        "fourth": "Voerde eenhedentesten uit, adresseerde problemen geïdentificeerd door SonarQube, refactoreerde methoden en klassen voor één verantwoordelijkheid, en upgradde code naar Java 8 (Juli 2018 - Mei 2019).",
+        "fifth": "Leidde de refactoring van een GIS-project in Java voor een uitbesteed project bij Havelsan (Juli 2018 - Mei 2019)."
+      },
+      "technologies": {
+        "first": ".NET", 
+        "second": ".NET Core", 
+        "third": ".NET MVC", 
+        "fourth": "REST APIs", 
+        "fifth": "JavaScript", 
+        "sixth": "MsSQL", 
+        "seventh": "PostgreSQL", 
+        "eighth": "JIRA"
+      }
+    }
+  },
+  "projects": {
+    "title": "Uitgelichte Projecten",
+    "viewCode": "Bekijk Code",
+    "first": {
+      "title": "BookStore",
+      "description": "Dit is de implementatie van een Boekenwinkel als onderdeel van een MSc. Software Engineering Senior Project. Het is een toepassing voor het verkopen en bestellen van tweedehands boeken.",
+      "completionDate": "Januari 2020",
+      "imageAlt": "Bibliotheek/Boekenkast"
+    },
+    "second": {
+      "title": "Assets API",
+      "description": "Dit project implementeert een eenvoudige service die informatie biedt over verschillende activa die op de markt beschikbaar zijn. De service leest informatie over activa uit een CSV-bestand en biedt verschillende eindpunten voor activa-beheer. De activa worden gedefinieerd door naam en ID, met elk activum beschreven door een vooraf gedefinieerde lijst van eigenschappen.",
+      "completionDate": "Januari 2021",
+      "imageAlt": "Abstract digitale gegevensvisualisatie"
+    },
+    "third": {
+      "title": "GeoJson Features",
+      "description": "De toepassing haalt functies op uit OpenStreetMap met behulp van de OSM API, converteert de XML-gegevens naar het GeoJSON-formaat met osmtogeojson.js, en parseert het in een lijst van GeoJSON-functies voor gebruik in de Web UI.",
+      "completionDate": "Mei 2021",
+      "imageAlt": "Map visualisatie van geografische gegevens"
+    },
+    "fourth": {
+      "title": "Mars Robotic Moves",
+      "description": "Dit project is een coderingsoefening om schoon coderen en abstractievaardigheden te verbeteren door het simuleren van robotnavigatie op een beperkt grid dat Mars representeert. Robots volgen instructies (L, R, F), met \"LOST\" robots een geur achterlaten om herhaalde valsheden te voorkomen. Het programma verwerkt elke robot sequentieel en geeft hun eindposities weer.",
+      "completionDate": "Juli 2022",
+      "imageAlt": "Robot navigeert op een grid"
+    },
+    "fifth": {
+      "title": "Order Integration API",
+      "description": "Integration API is een kleine POC-oplossing ontworpen om leverancierszijde bestellingen te verwerken via platte-bestandintegratie, prijsvalidatie, voorraadbeheer en ERP-systeemcommunicatie. Het systeem verwerkt vastlengtebestellingen (.sdf-bestanden) en voert uitgebreide validatie- en verwerkingsworkflows uit.",
+      "completionDate": "Augustus 2022",
+      "imageAlt": "Data integratie en workflowvisualisatie"
+    },
+    "sixth": {
+      "title": "Smart Charging PoC",
+      "description": "Een kleine POC-toepassing met een RESTful API-implementatie voor het beheren van elektrische voertuichargingstations, groepen en connectors met capaciteitsbeheer.",
+      "completionDate": "November 2022",
+      "imageAlt": "Elektrisch voertuichargingstation"
+    }
+  },
+  "freelance": {
+    "title": "Freelance Projecten",
+    "duration": "Duur",
+    "first": {
+      "title": "Boodschappen Web App",
+      "duration": "1 jaar",
+      "description": "Ontworpen en ontwikkeld een uitgebreide e-commerce oplossing voor een boodschappenbedrijf. Implementeerde full-stack development met ASP.NET MVC, creëerde een schaalbare architectuur die voorraadbeheer, orderverwerking en gebruikersauthenticatie afhandelde. Ontwierp en implementeerde zowel klantgerichte interfaces als administratieve dashboards, om een ​​naadloze winkelervaring te garanderen.",
+      "technologies": {
+        "first": "ASP.NET MVC",
+        "second": "SQL Server",
+        "third": "JavaScript",
+        "fourth": "Bootstrap",
+        "fifth": "Entity Framework"
+      }
+    },
+    "second": {
+      "title": "Orbit Crypto",
+      "duration": "2 maanden",
+      "description": "Leidde frontend-ontwikkeling voor een cryptocurrencyplatform dat gespecialiseerd is in tokenlanceringen en financieringsoperaties. Ontwikkelde robuuste wallet-integratiesystemen en implementeerde complexe blockchain-interacties met behulp van React. Ontwikkelde intuïtieve gebruikersinterfaces voor tokenbeheer, financieringsoperaties en realtime cryptocurrency-tracking.",
+      "technologies": {
+        "first": "React",
+        "second": "Web3.js",
+        "third": "TypeScript",
+        "fourth": "Tailwind CSS",
+        "fifth": "MetaMask Integratie"
+      }
+    },
+    "third": {
+      "title": "Groothandel E-commerceplatform",
+      "duration": "1 jaar",
+      "description": "Leidde de full-stack ontwikkeling van een wholesale e-commerce platform, gericht op B2B transacties. Implementeerde complexe database queries voor bulk order verwerking en integreerde meerdere third-party services voor betalingsverwerking, verzending en e-factuurbeheer. Ontwikkelde responsieve gebruikersinterfaces die geoptimaliseerd zijn voor wholesale operaties.",
+      "technologies": {
+        "first": "ASP.NET Core",
+        "second": "React",
+        "third": "SQL Server",
+        "fourth": "Redis",
+        "fifth": "RESTful APIs"
+      }
+    }
+  },
+  "certificates": {
+    "title": "Certificaten",
+    "viewCredential": "Bekijk Credential",
+    "showCredential": "Toon",
+    "button": {
+      "showMore": "Meer",
+      "showLess": "Minder"
+    },
+    "first": {
+      "title": "ASP .NET Web Application Development (.NET Core) Certificaat",
+      "issuer": "Coder Bilişim Akademisi",
+      "date": "September 2016 - November 2016",
+      "skills": {
+          "first": ".NET Core",
+          "second": ".NET",
+          "third": "C#"
+        }
+    },
+    "second": {
+      "title": "RESTful API'lar",
+      "issuer": "LinkedIn",
+      "date": "Mei 2022",
+      "skills": {
+        "first": "RESTful API's",
+        "second": "API-ontwerp",
+        "third": "OpenAPI"
+      }
+    },
+    "third": {
+      "title": "Microsoft SQL Server Certificaat",
+      "issuer": "Coder Bilişim Akademisi",
+      "date": "Juni 2016 - Augustus 2016",
+      "skills": {
+        "first": "SQL Server",
+        "second": "SSMS",
+        "third": ".NET"
+      }
+    },
+    "fourth": {
+      "title": "Learning REST APIs",
+      "issuer": "LinkedIn",
+      "date": "Mei 2022",
+      "skills": {
+        "first": "RESTful API's",
+        "second": "API-ontwerp"
+      }
+    },
+    "fifth": {
+      "title": "Asp .NET C#, SQL en Web Forms Software Specialist Certificaat",
+      "issuer": "Vektörel Bilişim",
+      "date": "Januari 2015 - Juli 2015",
+      "skills": {
+        "first": ".NET",
+        "second": "Web Forms",
+        "third": "SQL"
+      }
+    },
+    "sixth": {
+      "title": "HTTP Essential Training",
+      "issuer": "LinkedIn",
+      "date": "Mei 2022",
+      "skills": {
+        "first": "HTTP"
+      }
+    },
+    "seventh": {
+      "title": "What is Data Science?",
+      "issuer": "Coursera",
+      "date": "Februari 2020",
+      "skills": {
+        "first": "Datawetenschap",
+        "second": "Gegevensanalyse"
+      }
+    },
+    "eighth": {
+      "title": "C# .NET Programmeercertificaat",
+      "issuer": "Coder Bilişim Akademisi",
+      "date": "Juli 2016 - September 2016",
+      "skills": {
+        "first": ".NET"
+      }
+    },
+    "ninth": {
+      "title": "Webdesign Certificaat",
+      "issuer": "Coder Bilişim Akademisi",
+      "date": "Mei 2016 - Juli 2016",
+      "skills": {
+        "first": ".NET",
+        "second": "HTML",
+        "third": "CSS",
+        "fourth": "JavaScript"
+      }
+    }
+  },
+  "contact": {
+    "title": "Neem Contact op",
+    "contactInformation": "Contactgegevens",
+    "letsConnect": "Laten we verbinding maken",
+    "messages": {
+      "errors": {
+        "allFieldsRequired": "Vul alle velden in",
+        "failedToSendMessage": "Fout bij versturen bericht. Probeer het opnieuw.",
+        "emptyMessage": "Berichtveld mag niet leeg zijn"
+      },
+      "success": {
+        "messageSent": "Bericht succesvol verstuurd!"
+      }
+    },
+    "form": {
+      "nationality": "Turks",
+      "location": "Krakau, Polen",
+      "linkedinProfile": "LinkedIn Profiel",
+      "subject": "Onderwerp",
+      "email": "Uw e-mailadres",
+      "mailContentPlaceholder": "Uw bericht hier..."
+    },
+    "buttons": {
+      "sendAsLinkedIn": "Verstuur als LinkedIn Bericht",
+      "sendAsEmail": "Verstuur als E-mail",
+      "sending": "Versturen..."
+    }
+  },
+  "cvModal": {
+    "title": "Curriculum Vitae",
+    "downloadFileName": "CV - Bekir Can Baykal.pdf",
+    "buttons": {
+      "previous": "Vorige",
+      "next": "Volgende",
+      "close": "Sluiten"
+    }
+  }
+} 

@@ -4,14 +4,17 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaFilePdf } from 'react-icons/fa';
 import { useTheme } from '../../context/ThemeContext';
 import CVModal from '../common/CVModal';
+import { useTranslations } from 'next-intl';
 
 const Hero: React.FC = () => {
   const { theme } = useTheme();
   const [showCVModal, setShowCVModal] = useState(false);
+  const t = useTranslations("hero");
   const titles = [
-    'Bekir Can Baykal',
-    'Senior Software Engineer',
-    '.NET Developer'
+    t('name'),
+    t('titles.specialty1'),
+    t('titles.specialty2'),
+    t('titles.specialty3')
   ];
 
   const animatedText = useTypewriter(titles, 150, 100, 2000);
@@ -55,7 +58,7 @@ const Hero: React.FC = () => {
             <h1 className={`text-5xl md:text-7xl font-bold mb-6 ${
               theme === 'dark' ? 'text-gray-100' : 'text-gray-900'
             }`}>
-              Hi, I'm{' '}
+              {t('greeting')} {' '}
               <span className={theme === 'dark' ? 'text-primary-400' : 'text-primary-600'}>
                 {animatedText}
                 <span className="cursor" />
@@ -64,7 +67,7 @@ const Hero: React.FC = () => {
             <p className={`text-xl md:text-2xl mb-8 ${
               theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
             }`}>
-              Senior Software Engineer | .NET Developer | Full Stack Developer (React)
+              {t('titles.specialty1')} | {t('titles.specialty2')} | {t('titles.specialty3')}
             </p>
 
             <div className="flex flex-col md:flex-row justify-center items-center gap-8 mb-12">
@@ -78,7 +81,7 @@ const Hero: React.FC = () => {
                   href="#projects"
                   className="bg-primary-600 text-white px-8 py-3 rounded-full hover:bg-primary-700 transition-all hover:shadow-lg transform hover:-translate-y-1"
                 >
-                  View Projects
+                  {t('buttons.viewProjects')}
                 </a>
                 <a
                   href="#contact"
@@ -91,7 +94,7 @@ const Hero: React.FC = () => {
                     }
                   `}
                 >
-                  Contact Me
+                  {t('buttons.contactMe')}
                 </a>
               </motion.div>
 
@@ -125,7 +128,7 @@ const Hero: React.FC = () => {
                 >
                   <FaFilePdf size={24} className="text-red-500" />
                   <span className="font-semibold text-red-500">
-                    CV
+                    {t('buttons.cv')}
                   </span>
                 </motion.button>
               </motion.div>

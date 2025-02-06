@@ -1,0 +1,366 @@
+{
+  "nav": {
+    "portfolio": "Portfolio",
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "experiences": "Experiences",
+    "projects": "Projects",
+    "freelance": "Freelance",
+    "certificates": "Certificates",
+    "contact": "Contact",
+    "more": "More"
+  },
+  "footer": {
+    "copyright": "All rights reserved.",
+    "specialty": "Senior Software Engineer"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "name": "Bekir Can Baykal",
+    "titles": {
+      "specialty1": "Senior Software Engineer",
+      "specialty2": "Senior .NET Developer",
+      "specialty3": "Senior Full Stack Developer (React)"
+    },
+    "buttons": {
+      "viewProjects": "View Projects",
+      "contactMe": "Contact Me",
+      "cv": "CV"
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "altProfileImage": "Profile image",
+    "highlights": {
+      "first": {
+        "title": "Senior Software Engineer",
+        "description": "Specialized in .NET Core and modern web technologies"
+      },
+      "second": {
+        "title": "MSc in Software Engineering",
+        "description": "Middle East Technical University (METU)"
+      },
+      "third": {
+        "title": "10+ Years Experience",
+        "description": "Building enterprise-level applications"
+      }
+    },
+    "mainContent": {
+      "part1": "I am a Senior Software Engineer with over 10 years of experience in developing enterprise-level applications. My expertise lies in .NET Core, React, and modern web technologies.",
+      "part2": "Throughout my career, I've worked on various projects ranging from e-commerce platforms to complex system integrations. I'm passionate about creating efficient, scalable solutions that solve real-world problems.",
+      "part3": "I hold a Master's degree in Software Engineering from Middle East Technical University, where I deepened my understanding of software architecture and design patterns."
+    }
+  },
+  "skills": {
+    "title": "Skills & Expertise",
+    "categories":{
+      "first":{
+        "title": "Backend Development"
+      },
+      "second":{
+        "title": "Frontend Development"
+      },
+      "third":{
+        "title": "DevOps & Tools"
+      }
+    },
+    "timeline":{
+      "first":{
+        "area": ".NET Development",
+        "description": "Enterprise Applications & APIs"
+      },
+      "second":{
+        "area": "Frontend Development",
+        "description": "React & Modern JavaScript"
+      },
+      "third":{
+        "area": "DevOps & Cloud",
+        "description": "Azure & CI/CD Pipelines"
+      }
+    }
+  },
+  "experiences": {
+    "title": "Professional Journey",
+    "first": {
+      "position": "Senior Software Engineer",
+      "duration": "Jul 2022 - Present",
+      "descriptions": {
+        "first": "The vessels are equipped with multiple engines and send data at specified intervals. The app analyzes the time-series data from the configured vessels. Our algorithms continuously evaluate this data and use it to generate recommendations.",
+        "second": "Involved in the development and maintenance of the Tekomar XPERT product.",
+        "third": "Refactoring the TimeSeries implementation to meet the specific requirements of a customer.",
+        "fourth": "Containerizing the newly developed approach using Docker.",
+        "fifth": "Deploying the Docker image onto an intranet server and conducting evaluations within that environment."
+      },
+      "technologies": {
+        "first": "C#", 
+        "second": ".NET", 
+        "third": "REST APIs", 
+        "fourth": "Scrum", 
+        "fifth": "Azure DevOps Server",
+        "sixth": "Docker", 
+        "seventh": "Microsoft SQL Server", 
+        "eighth": "React.js", 
+        "ninth": ".NET Core", 
+        "tenth": "Git", 
+        "eleventh": "Microsoft Azure", 
+        "twelfth": "Entity Framework (EF) Core",
+        "thirteenth": "JIRA", 
+        "fourteenth": "Docker"
+      }
+    },
+    "second": {
+      "position": "Senior Software Engineer Technical Lead",
+      "duration": "May 2021 - Jul 2022 · 1 year 3 months",
+      "descriptions": {
+        "first": "As a team lead, collaborated with a team of five individuals, applying the Scrum methodology to develop three projects: Project Management Plan project, Prioritization, and Performance.",
+        "second": "Successfully delivered all three projects within one-year timeframe, utilizing the following technologies: .NET Core 5, React, Redux Toolkit, PostGre SQL, and Material UI.",
+        "third": "Managed both customer relations and team coordination effectively.",
+        "fourth": "Provided valuable consultancy to the customer, specifically focusing on .Net Development.",
+        "fifth": "Supported the customer, Aselsan, one of the most important defense industry companies in Türkiye, in achieving their project goals and requirements."
+      },
+      "technologies": {
+        "first": ".NET", 
+        "second": ".NET Core", 
+        "third": "REST APIs", 
+        "fourth": "JavaScript", 
+        "fifth": "Redux", 
+        "sixth": "Team Leadership", 
+        "seventh": "PostgreSQL", 
+        "eighth": "React.js"
+      }
+    },
+    "third": {
+      "position": "Software Engineer",
+      "duration": "Jul 2018 - May 2021 · ~3 years",
+      "descriptions": {
+        "first": "Developed and maintained a disaster risk management system for the Ministry of Environment and Urban Planning using .Net MVC, MSSql DB, and JavaScript (September 2020 - May 2021).",
+        "second": "Contributed to the development and maintenance of a staff management system for the Turkish Court of Accounts, utilizing .Net MVC 5, Oracle DB, MSSql DB, Postgre SQL, JavaScript, and jQuery (February 2020 - September 2020).",
+        "third": "Collaborated on a GIS-focused web application, specifically a Map Widget, using React and JavaScript (May 2019 - February 2020).",
+        "fourth": "Conducted unit testing, addressed issues identified by SonarQube, refactored methods and classes for single responsibility, and upgraded code to Java 8 (July 2018 - May 2019).",
+        "fifth": "Led the refactoring of a GIS project in Java for an outsourced project at Havelsan (July 2018 - May 2019)."
+      },
+      "technologies": {
+        "first": ".NET", 
+        "second": ".NET Core", 
+        "third": ".NET MVC", 
+        "fourth": "REST APIs", 
+        "fifth": "JavaScript", 
+        "sixth": "MsSQL", 
+        "seventh": "PostgreSQL", 
+        "eighth": "JIRA"
+      }
+    }
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "viewCode": "View Code",
+    "first": {
+      "title": "BookStore",
+      "description": "This is the implementation of a Bookstore system as part of an MSc. Software Engineering Senior Project. It is a secondhand book selling and ordering application. The project utilizes a range of technologies and demonstrates skills in software development, architecture design, and project management.",
+      "completionDate": "January 2020",
+      "imageAlt": "Library/Bookshelf"
+    },
+    "second": {
+      "title": "Assets API",
+      "description": "This project implements a simple service that provides information about different assets available on the market. The service reads information about assets from a CSV file and provides various endpoints for asset management. The assets are defined by name and ID, with each asset described by a predefined list of properties.",
+      "completionDate": "January 2021",
+      "imageAlt": "Abstract digital data visualization"
+    },
+    "third": {
+      "title": "GeoJson Features",
+      "description": "The application retrieves features from OpenStreetMap using the OSM API, converts the XML data to GeoJSON format with osmtogeojson.js, and parses it into a list of GeoJSON features for use in the Web UI.",
+      "completionDate": "May 2021",
+      "imageAlt": "Map visualization representing geographical data"
+    },
+    "fourth": {
+      "title": "Mars Robotic Moves",
+      "description": "This project is a coding exercise to improve clean coding and abstraction skills by simulating robot navigation on a bounded grid representing Mars. Robots follow instructions (L, R, F), with \"LOST\" robots leaving a scent to prevent repeated falls. The program processes each robot sequentially and outputs their final positions.",
+      "completionDate": "July 2022",
+      "imageAlt": "Robot navigating on a grid"
+    },
+    "fifth": {
+      "title": "Order Integration API",
+      "description": "Integration API is a small POC solution designed to process supplier-side orders through flat file integration, price validation, stock management, and ERP system communication. The system handles fixed-length order documents (.sdf files) and performs comprehensive validation and processing workflows.",
+      "completionDate": "August 2022",
+      "imageAlt": "Data integration and workflow visualization"
+    },
+    "sixth": {
+      "title": "Smart Charging PoC",
+      "description": "A small POC application with a RESTful API implementation for managing electric vehicle charging stations, groups, and connectors with capacity management.",
+      "completionDate": "November 2022",
+      "imageAlt": "Electric vehicle charging station"
+    }
+  },
+  "freelance": {
+    "title": "Freelance Projects",
+    "duration": "Duration",
+    "first": {
+      "title": "Grocery Web App",
+      "duration": "1 year",
+      "description": "Architected and developed a comprehensive e-commerce solution for a grocery business startup. Implemented full-stack development using ASP.NET MVC, creating a scalable architecture that handled inventory management, order processing, and user authentication. Designed and implemented both customer-facing interfaces and administrative dashboards, ensuring a seamless shopping experience.",
+      "technologies": {
+        "first": "ASP.NET MVC",
+        "second": "SQL Server",
+        "third": "JavaScript",
+        "fourth": "Bootstrap",
+        "fifth": "Entity Framework"
+      }
+    },
+    "second": {
+      "title": "Orbit Crypto",
+      "duration": "2 months",
+      "description": "Led frontend development for a cryptocurrency platform specializing in token launches and funding operations. Engineered robust wallet integration systems and implemented complex blockchain interactions using React. Developed intuitive user interfaces for token management, funding operations, and real-time cryptocurrency tracking.",
+      "technologies": {
+        "first": "React",
+        "second": "Web3.js",
+        "third": "TypeScript",
+        "fourth": "Tailwind CSS",
+        "fifth": "MetaMask Integration"
+      }
+    },
+    "third": {
+      "title": "Wholesale E-commerce Platform",
+      "duration": "1 year",
+      "description": "Spearheaded full-stack development of a wholesale e-commerce platform, focusing on B2B transactions. Implemented complex database queries for bulk order processing and integrated multiple third-party services for payment processing, shipping, and e-invoice management. Developed responsive user interfaces optimized for wholesale operations.",
+      "technologies": {
+        "first": "ASP.NET Core",
+        "second": "React",
+        "third": "SQL Server",
+        "fourth": "Redis",
+        "fifth": "RESTful APIs"
+      }
+    }
+  },
+  "certificates": {
+    "title": "Certificates",
+    "viewCredential": "View Credential",
+    "showCredential": "Show",
+    "button": {
+      "showMore": "Show More",
+      "showLess": "Show Less"
+    },
+    "first": {
+      "title": "ASP .NET Web Application Development (.NET Core) Certificate",
+      "issuer": "Coder Bilişim Akademisi",
+      "date": "From Sep 2016 to Nov 2016",
+      "skills": {
+          "first": ".NET Core",
+          "second": ".NET",
+          "third": "C#"
+        }
+    },
+    "second": {
+      "title": "Designing RESTful APIs",
+      "issuer": "LinkedIn",
+      "date": "Issued May 2022",
+      "skills": {
+        "first": "RESTful APIs",
+        "second": "API Design",
+        "third": "OpenAPI"
+      }
+    },
+    "third": {
+      "title": "Microsoft SQL Server Certificate",
+      "issuer": "Coder Bilişim Akademisi",
+      "date": "From Jun 2016 to Aug 2016",
+      "skills": {
+        "first": "SQL Server",
+        "second": "SSMS",
+        "third": ".NET"
+      }
+    },
+    "fourth": {
+      "title": "Learning REST APIs",
+      "issuer": "LinkedIn",
+      "date": "Issued May 2022",
+      "skills": {
+        "first": "RESTful APIs",
+        "second": "API Design"
+      }
+    },
+    "fifth": {
+      "title": "Asp .NET C#, SQL and Web Forms Software Specialist Certificate",
+      "issuer": "Vektörel Bilişim",
+      "date": "From Jan 2015 to Jul 2015",
+      "skills": {
+        "first": ".NET",
+        "second": "Web Forms",
+        "third": "SQL"
+      }
+    },
+    "sixth": {
+      "title": "HTTP Essential Training",
+      "issuer": "LinkedIn",
+      "date": "Issued May 2022",
+      "skills": {
+        "first": "HTTP"
+      }
+    },
+    "seventh": {
+      "title": "What is Data Science?",
+      "issuer": "Coursera",
+      "date": "Issued Feb 2020",
+      "skills": {
+        "first": "Data Science",
+        "second": "Data Analysis"
+      }
+    },
+    "eighth": {
+      "title": "C# .NET Programming Certificate",
+      "issuer": "Coder Bilişim Akademisi",
+      "date": "From Jul 2016 to Sep 2016",
+      "skills": {
+        "first": ".NET"
+      }
+    },
+    "ninth": {
+      "title": "Web Design Certificate",
+      "issuer": "Coder Bilişim Akademisi",
+      "date": "From May 2016 to Jul 2016",
+      "skills": {
+        "first": ".NET",
+        "second": "HTML",
+        "third": "CSS",
+        "fourth": "JavaScript"
+      }
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "contactInformation": "Contact Information",
+    "letsConnect": "Let's connect",
+    "messages": {
+      "errors": {
+        "allFieldsRequired": "Please fill in all fields",
+        "failedToSendMessage": "Failed to send message. Please try again.",
+        "emptyMessage": "Message field cannot be empty"
+      },
+      "success": {
+        "messageSent": "Message sent successfully!"
+      }
+    },
+    "form": {
+      "nationality": "Turkish",
+      "location": "Kraków, Poland",
+      "linkedinProfile": "LinkedIn Profile",
+      "subject": "Subject",
+      "email": "Your email address",
+      "mailContentPlaceholder": "Write your message here..."
+    },
+    "buttons": {
+      "sendAsLinkedIn": "Send as LinkedIn Message",
+      "sendAsEmail": "Send as Email",
+      "sending": "Sending..."
+    }
+  },
+  "cvModal": {
+    "title": "Curriculum Vitae",
+    "downloadFileName": "CV - Bekir Can Baykal.pdf",
+    "buttons": {
+      "previous": "Previous",
+      "next": "Next",
+      "close": "Close"
+    }
+  }
+} 

@@ -4,57 +4,93 @@ import { Experience as ExperienceType } from '../../types';
 import { FaCalendar, FaTasks } from 'react-icons/fa';
 import SectionTitle from '../common/SectionTitle';
 import { useTheme } from '../../context/ThemeContext';
-
-const experiences: ExperienceType[] = [
-  {
-    company: 'Accelleron (Andersen Lab)',
-    position: 'Senior Software Engineer',
-    duration: 'Jul 2022 - Present',
-    description: [
-      'The vessels are equipped with multiple engines and send data at specified intervals. The app analyzes the time-series data from the configured vessels. Our algorithms continuously evaluate this data and use it to generate recommendations.',
-      'Involving in the development and maintenance of the Tekomar XPERT product.',
-      'Refactoring the TimeSeries implementation to meet the specific requirements of a customer.',
-      'Containerizing the newly developed approach using Docker.',
-      'Deploying the Docker image onto an intranet server and conducting evaluations within that environment.'
-    ],
-    technologies: ['C#', '.NET', 'REST APIs', 'Scrum', 'Azure DevOps Server', 'Docker', 'Microsoft SQL Server', 'React.js', '.NET Core', 'Git', 'Microsoft Azure', 'Entity Framework (EF) Core', 'JIRA', 'Docker']
-  },
-  {
-    company: 'ICTerra',
-    position: 'Senior Software Engineer Technical Lead',
-    duration: 'May 2021 - Jul 2022 · 1 year 3 months',
-    description: [
-      'As a team lead, collaborated with a team of five individuals, applying the Scrum methodology to develop three projects: Project Management Plan project, Prioritization, and Performance.',
-      'Successfully delivered all three projects within a one-year timeframe, utilizing the following technologies: .NET Core 5, React, Redux Toolkit, PostGre SQL, and Material UI.',
-      'Managed both customer relations and team coordination effectively.',
-      'Provided valuable consultancy to the customer, specifically focusing on .Net Development.',
-      'Supported the customer, Aselsan, one of the most important defense industry companies in Türkiye, in achieving their project goals and requirements.'
-    ],
-    technologies: ['.NET', '.NET Core', 'REST APIs', 'JavaScript', 'Redux', 'Team Leadership', 'PostgreSQL', 'React.js']
-  },
-  {
-    company: 'Ante Group',
-    position: 'Software Engineer',
-    duration: 'Jul 2018 - May 2021 · ~3 years',
-    description: [
-      'Developed and maintained a disaster risk management system for the Ministry of Environment and Urban Planning using .Net MVC, MSSql DB, and JavaScript (September 2020 - May 2021).',
-      'Contributed to the development and maintenance of a staff management system for the Turkish Court of Accounts, utilizing .Net MVC 5, Oracle DB, MSSql DB, Postgre SQL, JavaScript, and jQuery (February 2020 - September 2020).',
-      'Collaborated on a GIS-focused web application, specifically a Map Widget, using React and JavaScript (May 2019 - February 2020).',
-      'Conducted unit testing, addressed issues identified by SonarQube, refactored methods and classes for single responsibility, and upgraded code to Java 8 (July 2018 - May 2019).',
-      'Led the refactoring of a GIS project in Java for an outsourced project at Havelsan (July 2018 - May 2019).'
-    ],
-    technologies: ['.NET', '.NET Core', 'REST APIs', 'JavaScript', 'Redux', 'Team Leadership', 'PostgreSQL', 'React.js']
-  }
-];
+import { useTranslations } from 'next-intl';
 
 const Experience: React.FC = () => {
   const { theme } = useTheme();
+  const t = useTranslations("experiences");
+
+  const experiences: ExperienceType[] = [
+    {
+      company: 'Accelleron (Andersen Lab)',
+      position: t('first.position'),
+      duration: t('first.duration'),
+      description: [
+        t('first.descriptions.first'),
+        t('first.descriptions.second'),
+        t('first.descriptions.third'),
+        t('first.descriptions.fourth'),
+        t('first.descriptions.fifth')
+      ],
+      technologies: [
+        t('first.technologies.first'),
+        t('first.technologies.second'),
+        t('first.technologies.third'),
+        t('first.technologies.fourth'),
+        t('first.technologies.fifth'),
+        t('first.technologies.sixth'),
+        t('first.technologies.seventh'),
+        t('first.technologies.eighth'),
+        t('first.technologies.ninth'),
+        t('first.technologies.tenth'),
+        t('first.technologies.eleventh'),
+        t('first.technologies.twelfth'),
+        t('first.technologies.thirteenth'),
+        t('first.technologies.fourteenth')
+      ]
+    },
+    {
+      company: 'ICTerra',
+      position: t('second.position'),
+      duration: t('second.duration'),
+      description: [
+        t('second.descriptions.first'),
+        t('second.descriptions.second'),
+        t('second.descriptions.third'),
+        t('second.descriptions.fourth'),
+        t('second.descriptions.fifth')
+      ],
+      technologies: [
+        t('second.technologies.first'),
+        t('second.technologies.second'),
+        t('second.technologies.third'),
+        t('second.technologies.fourth'),
+        t('second.technologies.fifth'),
+        t('second.technologies.sixth'),
+        t('second.technologies.seventh'),
+        t('second.technologies.eighth')
+      ]
+    },
+    {
+      company: 'Ante Grup',
+      position: t('third.position'),
+      duration: t('third.duration'),
+      description: [
+        t('third.descriptions.first'),
+        t('third.descriptions.second'),
+        t('third.descriptions.third'),
+        t('third.descriptions.fourth'),
+        t('third.descriptions.fifth')
+      ],
+      technologies: [
+        t('third.technologies.first'),
+        t('third.technologies.second'),
+        t('third.technologies.third'),
+        t('third.technologies.fourth'),
+        t('third.technologies.fifth'),
+        t('third.technologies.sixth'),
+        t('third.technologies.seventh'),
+        t('third.technologies.eighth')
+      ]
+    }
+  ];
+
 
   return (
-    <section id="experience" className={`section-container ${
+    <section id="experiences" className={`section-container ${
       theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'
     }`}>
-      <SectionTitle title="Professional Journey" />
+      <SectionTitle title={t('title')} />
       <div className="max-w-4xl mx-auto">
         {experiences.map((exp, index) => (
           <motion.div
@@ -112,8 +148,8 @@ const Experience: React.FC = () => {
                   transition={{ duration: 0.2, delay: 0.05 * i }}
                   className={`px-3 py-1 rounded-full text-sm font-medium ${
                     theme === 'dark'
-                      ? 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      ? 'bg-primary-900/30 text-primary-400'
+                      : 'bg-primary-50 text-primary-600'
                   } transition-colors duration-200`}
                 >
                   {tech}

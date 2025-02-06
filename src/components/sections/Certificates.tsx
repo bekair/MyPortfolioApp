@@ -1,16 +1,19 @@
+"use client";
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaCertificate, FaExternalLinkAlt } from 'react-icons/fa';
 import SectionTitle from '../common/SectionTitle';
 import { useTheme } from '../../context/ThemeContext';
 import CertificateModal from '../common/CertificateModal';
+import { useTranslations } from 'next-intl';
 
 interface Certificate {
   title: string;
   issuer: string;
   date: string;
   credentialLink?: string;
-  skills?: string;
+  skills?: string[];
   imageUrl?: string;
 }
 
@@ -18,66 +21,102 @@ const Certificates: React.FC = () => {
   const { theme } = useTheme();
   const [visibleItems, setVisibleItems] = useState(3);
   const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null);
-  
+  const t = useTranslations('certificates');
+
   const certificates: Certificate[] = [
     {
-      title: "ASP .NET Web Application Development (.NET Core) Certificate",
-      issuer: "Coder Bilişim Akademisi",
-      date: "From Sep 2016 to Nov 2016",
-      skills: "Skills: .NET Core, .NET, C#",
+      title: t('first.title'),
+      issuer: t('first.issuer'),
+      date: t('first.date'),
+      skills: [
+        t('first.skills.first'), 
+        t('first.skills.second'), 
+        t('first.skills.third')
+      ],
       imageUrl: "/images/certificates/aspnet-core-web-application-development.png"
     },
     {
-      title: "Designing RESTful APIs",
-      issuer: "LinkedIn",
-      date: "Issued May 2022",
+      title: t('second.title'),
+      issuer: t('second.issuer'),
+      date: t('second.date'),
+      skills: [
+        t('second.skills.first'), 
+        t('second.skills.second'), 
+        t('second.skills.third')
+      ],
       credentialLink: "https://www.linkedin.com/learning/certificates/1583f9efa7d84d0bc832bdb35d659e119675a32d25fb1476b8048914205929c3"
     },
     {
-      title: "Microsoft SQL Server Certificate",
-      issuer: "Coder Bilişim Akademisi",
-      date: "From Jun 2016 to Aug 2016",
+      title: t('third.title'),
+      issuer: t('third.issuer'),
+      date: t('third.date'),
       imageUrl: "/images/certificates/microsoft-sql-server.png",
-      skills: "Skills: .NET"
+      skills: [
+        t('third.skills.first'), 
+        t('third.skills.second'), 
+        t('third.skills.third')
+      ]
     },
     {
-      title: "Learning REST APIs",
-      issuer: "LinkedIn",
-      date: "May 2022",
+      title: t('fourth.title'),
+      issuer: t('fourth.issuer'),
+      date: t('fourth.date'),
+      skills: [
+        t('fourth.skills.first'), 
+        t('fourth.skills.second')
+      ],
       credentialLink: "https://www.linkedin.com/learning/certificates/f244e7d332dc17d94b2ba0e2d34331244ef76789b201f24a6833bec991dc9c7d"
     },
     {
-      title: "Asp .NET C#, SQL and Web Forms Software Specialist Certificate",
-      issuer: "Vektörel Bilişim",
-      date: "From Jan 2015 to Jul 2015",
+      title: t('fifth.title'),
+      issuer: t('fifth.issuer'),
+      date: t('fifth.date'),
       credentialLink: "#",
       imageUrl: "/images/certificates/asp-net-sql-web-forms.png",
-      skills: "Skills: .NET"
+      skills: [
+        t('fifth.skills.first'), 
+        t('fifth.skills.second'), 
+        t('fifth.skills.third')
+      ]
     },
     {
-      title: "HTTP Essential Training",
-      issuer: "LinkedIn",
-      date: "Issued May 2022",
+      title: t('sixth.title'),
+      issuer: t('sixth.issuer'),
+      date: t('sixth.date'),
+      skills: [
+        t('sixth.skills.first')
+      ],
       credentialLink: "https://www.linkedin.com/learning/certificates/05999edc61ecbab9e573380dbf496b08ae2cd44b80b1992484114f0158ac9fc5",
     },
     {
-      title: "What is Data Science?",
-      issuer: "Coursera",
-      date: "Issued Feb 2020",
+      title: t('seventh.title'),
+      issuer: t('seventh.issuer'),
+      date: t('seventh.date'),
+      skills: [
+        t('seventh.skills.first'), 
+        t('seventh.skills.second')
+      ],
       credentialLink: "https://www.coursera.org/account/accomplishments/verify/563MU28PJ9ZM",
     },
     {
-      title: "C# .NET Programming Certificate",
-      issuer: "Coder Bilişim Akademisi",
-      date: "From Jul 2016 to Sep 2016",
-      skills: "Skills: .NET",
+      title: t('eighth.title'),
+      issuer: t('eighth.issuer'),
+      date: t('eighth.date'),
+      skills: [
+        t('eighth.skills.first')
+      ],
       imageUrl: "/images/certificates/c-net-programming.png"
     },
     {
-      title: "Web Design Certificate",
-      issuer: "Coder Bilişim Akademisi",
-      date: "From May 2016 to Jul 2016",
-      skills: "Skills: .NET, HTML, CSS, JavaScript",
+      title: t('ninth.title'),
+      issuer: t('ninth.issuer'),
+      date: t('ninth.date'),
+      skills: [
+        t('ninth.skills.first'), 
+        t('ninth.skills.second'), 
+        t('ninth.skills.third'), 
+        t('ninth.skills.fourth')
+      ],
       imageUrl: "/images/certificates/web-design.png"
     }
   ];
@@ -87,6 +126,11 @@ const Certificates: React.FC = () => {
       setVisibleItems(certificates.length);
     } else {
       setVisibleItems(3);
+      // Scroll to the top of the certificates section when showing less
+      const certificatesSection = document.getElementById('certificates');
+      if (certificatesSection) {
+        certificatesSection.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -105,8 +149,8 @@ const Certificates: React.FC = () => {
       theme === 'dark' ? 'bg-gray-900' : 'bg-white'
     }`}>
       <div className="max-w-6xl mx-auto">
-        <SectionTitle title="Certifications" />
-        
+        <SectionTitle title={t('title')} />
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {certificates.slice(0, visibleItems).map((cert, index) => (
             <motion.div
@@ -145,13 +189,23 @@ const Certificates: React.FC = () => {
                     {cert.date}
                   </p>
                   {cert.skills && (
-                    <p className={`text-xs mt-2 ${
-                      theme === 'dark' ? 'text-gray-400' : 'text-gray-600'
-                    }`}>
-                      {cert.skills}
-                    </p>
+                    <div className="flex flex-wrap gap-2 mt-2 justify-center">
+                      {cert.skills.map((skill) => (
+                        <span
+                          key={skill}
+                          className={`px-2 py-1 rounded-full text-xs font-medium ${
+                            theme === 'dark'
+                              ? 'bg-primary-900/30 text-primary-400'
+                              : 'bg-primary-50 text-primary-600'
+                          }`}
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
                   )}
                 </div>
+
               </div>
               
               <div className="flex justify-center mt-6">
@@ -171,11 +225,12 @@ const Certificates: React.FC = () => {
                 >
                   {cert.credentialLink && cert.credentialLink !== "#" ? (
                     <>
-                      View Credential
+                      {t('viewCredential')}
                       <FaExternalLinkAlt size={14} />
                     </>
+
                   ) : (
-                    "Show"
+                    t('showCredential')
                   )}
                 </motion.button>
               </div>
@@ -200,9 +255,10 @@ const Certificates: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              {visibleItems === 3 ? 'Load More' : 'Show Less'}
+              {visibleItems === 3 ? t('button.showMore') : t('button.showLess')}
             </motion.button>
           </motion.div>
+
         )}
       </div>
 

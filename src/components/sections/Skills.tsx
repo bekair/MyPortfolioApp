@@ -19,59 +19,12 @@ import {
 } from 'react-icons/si';
 import SectionTitle from '../common/SectionTitle';
 import { useTheme } from '../../context/ThemeContext';
-
-const skillCategories = [
-  {
-    title: "Backend Development",
-    skills: [
-      { name: '.NET Core', level: 95, icon: SiDotnet },
-      { name: 'C#', level: 95, icon: SiCsharp },
-      { name: 'REST APIs', level: 90, icon: FaServer },
-      { name: 'Entity Framework', level: 90, icon: FaMicrosoft },
-      { name: 'SQL Server', level: 90, icon: SiMicrosoftsqlserver },
-    ]
-  },
-  {
-    title: "Frontend Development",
-    skills: [
-      { name: 'React.js', level: 85, icon: FaReact },
-      { name: 'TypeScript', level: 85, icon: SiTypescript },
-      { name: 'JavaScript', level: 85, icon: FaJs },
-      { name: 'Redux', level: 85, icon: SiRedux },
-    ]
-  },
-  {
-    title: "DevOps & Tools",
-    skills: [
-      { name: 'Azure DevOps', level: 90, icon: SiAzuredevops },
-      { name: 'Docker', level: 85, icon: FaDocker },
-      { name: 'Git', level: 90, icon: FaGitAlt },
-    ]
-  }
-];
-
-const experienceTimeline = [
-  {
-    year: "10+",
-    area: ".NET Development",
-    description: "Enterprise Applications & APIs"
-  },
-  {
-    year: "6+",
-    area: "Frontend Development",
-    description: "React & Modern JavaScript"
-  },
-  {
-    year: "2.5+",
-    area: "DevOps & Cloud",
-    description: "Azure & CI/CD Pipelines"
-  }
-];
+import { useTranslations } from 'next-intl';
 
 const SkillCard: React.FC<{ skill: Skill }> = ({ skill }) => {
   const { theme } = useTheme();
   const Icon = skill.icon;
-  
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -116,6 +69,55 @@ const SkillCard: React.FC<{ skill: Skill }> = ({ skill }) => {
 
 const Skills: React.FC = () => {
   const { theme } = useTheme();
+  const t = useTranslations("skills");
+  const skillCategories = [
+    {
+      title: t('categories.first.title'),
+      skills: [
+        { name: '.NET Core', level: 95, icon: SiDotnet },
+        { name: 'C#', level: 95, icon: SiCsharp },
+        { name: 'REST APIs', level: 90, icon: FaServer },
+        { name: 'Entity Framework', level: 90, icon: FaMicrosoft },
+        { name: 'SQL Server', level: 90, icon: SiMicrosoftsqlserver },
+      ]
+    },
+    {
+      title: t('categories.second.title'),
+      skills: [
+        { name: 'React.js', level: 85, icon: FaReact },
+        { name: 'TypeScript', level: 85, icon: SiTypescript },
+        { name: 'JavaScript', level: 85, icon: FaJs },
+        { name: 'Redux', level: 85, icon: SiRedux },
+
+      ]
+    },
+    {
+      title: t('categories.third.title'),
+      skills: [
+        { name: 'Azure DevOps', level: 90, icon: SiAzuredevops },
+        { name: 'Docker', level: 85, icon: FaDocker },
+        { name: 'Git', level: 90, icon: FaGitAlt },
+      ]
+    }
+  ];
+
+  const experienceTimeline = [
+    {
+      year: "10+",
+      area: t('timeline.first.area'),
+      description: t('timeline.first.description')
+    },
+    {
+      year: "6+",
+      area: t('timeline.second.area'),
+      description: t('timeline.second.description')
+    },
+    {
+      year: "2.5+",
+      area: t('timeline.third.area'),
+      description: t('timeline.third.description')
+    }
+  ];
 
   return (
     <section id="skills" className={`section-container ${
@@ -127,8 +129,7 @@ const Skills: React.FC = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <SectionTitle title="Skills & Expertise" />
-
+        <SectionTitle title={t('title')} />
         {/* Experience Timeline */}
         <div className="max-w-4xl mx-auto mb-16">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
