@@ -31,6 +31,60 @@ const Hero: React.FC = () => {
     setShowCVModal(false);
   }, []);
 
+  const subtitleText = (
+    <motion.div 
+      className="flex flex-wrap justify-center gap-6 mb-12"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
+      {[
+        { text: t('titles.specialty1'), color: 'from-blue-500 to-cyan-400' },
+        { text: t('titles.specialty2'), color: 'from-purple-500 to-pink-400' },
+        { text: t('titles.specialty3'), color: 'from-orange-500 to-amber-400' }
+      ].map(({ text, color }, index) => (
+        <motion.div
+          key={text}
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.5 + index * 0.2 }}
+          className="relative group"
+        >
+          <motion.span
+            className={`
+              absolute inset-0 rounded-lg
+              bg-gradient-to-r ${color} opacity-20 group-hover:opacity-30
+              blur-xl group-hover:blur-2xl
+              transition-all duration-300
+            `}
+          />
+          <motion.span
+            whileHover={{ scale: 1.02 }}
+            className={`
+              relative
+              px-6 py-2.5
+              rounded-lg
+              text-lg md:text-xl
+              font-medium
+              inline-block
+              ${theme === 'dark'
+                ? 'bg-gray-900/80 text-white border border-gray-700'
+                : 'bg-white/80 text-gray-800 border border-gray-200'
+              }
+              backdrop-blur-md
+              shadow-lg
+              transition-all duration-300
+              hover:shadow-xl
+              hover:border-opacity-50
+            `}
+          >
+            {text}
+          </motion.span>
+        </motion.div>
+      ))}
+    </motion.div>
+  );
+
   return (
     <section id="home" className={`min-h-screen flex items-center justify-center relative overflow-hidden ${
       theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'
@@ -64,11 +118,7 @@ const Hero: React.FC = () => {
                 <span className="cursor" />
               </span>
             </h1>
-            <p className={`text-xl md:text-2xl mb-8 ${
-              theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
-            }`}>
-              {t('titles.specialty1')} | {t('titles.specialty2')} | {t('titles.specialty3')}
-            </p>
+            {subtitleText}
 
             <div className="flex flex-col md:flex-row justify-center items-center gap-8 mb-12">
               <motion.div
@@ -113,7 +163,7 @@ const Hero: React.FC = () => {
                   <FaGithub size={28} />
                 </a>
                 <a 
-                  href="https://www.linkedin.com/in/bekir-can-baykal-msc-1545157b" 
+                  href="https://www.linkedin.com/in/bekircanbaykal" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center text-gray-600 hover:text-primary-600 transition-colors"

@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 const Footer: React.FC = () => {
   const name = 'Bekir Can Baykal';
   const githubUrl = 'https://github.com/bekair';
-  const linkedinUrl = 'https://www.linkedin.com/in/bekir-can-baykal-msc-1545157b';
+  const linkedinUrl = 'https://www.linkedin.com/in/bekircanbaykal';
   const t = useTranslations("footer");
   
   return (

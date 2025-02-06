@@ -65,7 +65,7 @@ const CVModal: React.FC<CVModalProps> = ({ isOpen, onClose }) => {
                   </h2>
                   {isMobile && (
                     <a
-                      href="/CV - Bekir Can Baykal (15.01.2025).pdf"
+                      href="/CV - Bekir Can Baykal (06.02.2025).pdf"
                       download={t('downloadFileName')}
                       className={`flex items-center gap-1 px-2 py-1 rounded text-sm ${
                         theme === 'dark' 
@@ -101,7 +101,7 @@ const CVModal: React.FC<CVModalProps> = ({ isOpen, onClose }) => {
                 {isMobile ? (
                   <>
                     <Document
-                      file="/CV - Bekir Can Baykal (15.01.2025).pdf"
+                      file="/CV - Bekir Can Baykal (06.02.2025).pdf"
                       onLoadSuccess={onDocumentLoadSuccess}
                       className="flex flex-col items-center"
                     >
@@ -136,7 +136,7 @@ const CVModal: React.FC<CVModalProps> = ({ isOpen, onClose }) => {
                   </>
                 ) : (
                   <iframe
-                    src="/CV - Bekir Can Baykal (15.01.2025).pdf#zoom=67"
+                    src="/CV - Bekir Can Baykal (06.02.2025).pdf#zoom=67"
                     className="w-full h-full"
                     title={t('title')}
                   />

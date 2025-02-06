@@ -24,7 +24,7 @@ const Contact: React.FC = () => {
       return;
     }
 
-    const linkedinMessageUrl = `https://www.linkedin.com/messaging/compose?recipient=bekir-can-baykal-msc-1545157b&body=${encodeURIComponent(message)}`;
+    const linkedinMessageUrl = `https://www.linkedin.com/messaging/compose?recipient=bekircanbaykal&body=${encodeURIComponent(message)}`;
     window.open(linkedinMessageUrl, '_blank', 'noopener,noreferrer');
   };
 
@@ -137,7 +137,7 @@ const Contact: React.FC = () => {
                   <FaLinkedin />
                 </div>
                 <a 
-                  href="https://www.linkedin.com/in/bekir-can-baykal-msc-1545157b"
+                  href="https://www.linkedin.com/in/bekircanbaykal"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`hover:underline ${
