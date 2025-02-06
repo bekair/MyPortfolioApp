@@ -362,5 +362,17 @@
       "next": "Next",
       "close": "Close"
     }
+  },
+  "errorPages": {
+    "notFound": {
+      "title": "Oops! Page Not Found",
+      "buttons": {
+        "backToHome": "Back to Home"
+      }
+    },
+    "internalServerError": {
+      "title": "Internal Server Error",
+      "description": "An error occurred while processing your request."
+    }
   }
 } 

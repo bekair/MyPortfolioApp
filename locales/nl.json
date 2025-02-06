@@ -362,5 +362,17 @@
       "next": "Volgende",
       "close": "Sluiten"
     }
+  },
+  "errorPages": {
+    "notFound": {
+      "title": "Oops! Pagina niet gevonden",
+      "buttons": {
+        "backToHome": "Terug naar de Startpagina"
+      }
+    },
+    "internalServerError": {
+      "title": "Interne Server Fout",
+      "description": "Er is een fout opgetreden bij het verwerken van uw aanvraag."
+    }
   }
 } 

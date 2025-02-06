@@ -364,5 +364,17 @@
         "next": "Następny",
         "close": "Zamknąć"
       }
+    },
+    "errorPages": {
+    "notFound": {
+      "title": "Ups! Strona nie została znaleziona",
+      "buttons": {
+        "backToHome": "Powrót do Strony Głównej"
+      }
+    },
+    "internalServerError": {
+      "title": "Wewnętrzny Błąd Serwera",
+      "description": "Wystąpił błąd podczas przetwarzania Twojego żądania."
     }
+  }
   } 

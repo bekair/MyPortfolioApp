@@ -362,5 +362,17 @@
       "next": "Sonraki",
       "close": "Kapat"
     }
+  },
+  "errorPages": {
+    "notFound": {
+      "title": "Oops! Sayfa Bulunamadı",
+      "buttons": {
+        "backToHome": "Ana Sayfaya Dön"
+      }
+    },
+    "internalServerError": {
+      "title": "Server Hatası",
+      "description": "İstek işlenirken bir hata oluştu."
+    }
   }
 } 
